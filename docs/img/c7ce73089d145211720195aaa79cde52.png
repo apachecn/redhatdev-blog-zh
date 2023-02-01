@@ -1,0 +1,3893 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <title>Hybrid Cloud Developer Tutorials and Software from Red Hat | Red Hat Developer</title>
+          <script>const rhdp2_is_download_page = false;</script>
+    
+          <!-- TrustArc -->
+      <script src="//static.redhat.com/libs/redhat/marketing/latest/trustarc/trustarc.js"></script>
+      <!-- End TrustArc -->
+    
+    <!-- DO NOT REMOVE  "00fef0cf90c42f3e40921fb3370e520a" -->
+    <script>
+    
+    /**
+    * Creates and dispatches an event trigger
+    * @param {String} evt - The name of the event
+    */
+    function sendCustomEvent(evt){
+      if(document.createEvent && document.body.dispatchEvent){
+        var event = document.createEvent('Event');
+        event.initEvent(evt, true, true); //can bubble, and is cancellable
+        document.body.dispatchEvent(event);
+      } else if(window.CustomEvent && document.body.dispatchEvent) {
+        var event = new CustomEvent(evt, {bubbles: true, cancelable: true});
+        document.body.dispatchEvent(event);
+      }
+    }
+    </script>
+    
+          <script>
+  var digitalData = {"page":{"attributes":{"queryParameters":"","taxonomyAudience":["9465"],"taxonomyBusinessUnit":["9685"],"taxonomyCampaign":[],"taxonomyLifecycle":[],"taxonomyProduct":["10475"],"taxonomyProductLine":["10675"],"taxonomyProject":["10595","10635","10655"],"taxonomyPromotion":[],"taxonomyRegion":[]},"category":{"contentSubType":"","contentType":"","keyPage":false,"keyPageType":"","pageType":"","primaryCategory":"","subCategories":[]},"pageInfo":{"breadCrumbs":[],"cms":"RHD CMS 8","contentID":"204425","destinationURL":"","errorMessage":"","errorType":"","language":"en","pageID":"204425","pageName":"Red Hat Developer Homepage","pageStatus":"published","referringDomain":"","referringURL":"","syndicationIds":[],"sysEnv":"","title":"Red Hat Developer Homepage"},"listing":{"browseFilter":"","query":"","queryMethod":"","refinementType":"","refinementValue":"","resultCount":"","searchType":""}},"user":[{"profile":[{"profileInfo":{"accountID":"","daysSinceLastPurchase":"","daysSinceRegistration":"","eloquaGUID":"POPULATE ELOQUA ID","keyCloakID":"","loggedIn":false,"profileID":"","registered":false,"socialAccountsLinked":[],"subscriptionFrequency":"","subscriptionLevel":"","userAgent":""}}]}],"event":[]};
+  ( function( w, d, dd, undefined ) {
+    // Check to see if the data object is on the page if not go no further.
+    if(!dd) {
+      return;
+    }
+
+  var bc = window.location.href.replace(/^https?\:\/\/([a-z._-]|[0-9])+(:?[0-9]*)?(\/pr\/[0-9]+\/export)?\//,'').replace(/\/$/,'').split('?')[0].split('#')[0].split(/\//),
+    primaryCategory= '',
+    subCategories = [],
+    pageType = '',
+    pageName = '',
+    contentType = '',
+    contentSubType = '';
+
+  if (bc.length === 1 && bc[0] === "") {
+    primaryCategory = "home page";
+    pageName = "home page";
+    subCategories.push('cms');
+    pageType = 'home';
+  } else {
+    switch(bc[0]) {
+      case 'about':
+        pageType = bc[0];
+        primaryCategory= 'about_us';
+        break;
+      case 'articles':
+        pageType = 'article';
+        pageName = bc[bc.length - 1];
+        primaryCategory = 'article';
+        break;
+      case 'events':
+        if (bc.length > 1) {
+          pageType = 'event';
+          primaryCategory = bc[0];
+          subCategories = bc.slice(1);
+        } else {
+          pageType = 'events';
+          primaryCategory= 'event-list';
+        }
+        break;
+      case 'products':
+        pageType = bc[0];
+        if (bc.length > 1) {
+          primaryCategory = bc[0];
+          subCategories = bc.slice(1);
+        } else {
+          primaryCategory = 'product-list';
+        }
+        break;
+      case 'topics':
+        pageType = "topic";
+        if (bc.length >= 2) {
+          primaryCategory = bc[0];
+          subCategories = [bc[1]];
+          pageName = subCategories[0];
+          contentType = "topic";
+          if (bc[2]) {
+            contentSubType = "topic-all"
+          } else {
+            contentSubType = "topic-landing"
+          }
+        }
+        break;
+      case 'learning':
+        let path = getLearningPathUrlData(window.location);
+        if (path) {
+          primaryCategory = path.primaryCategory;
+          pageType = primaryCategory;
+          subCategories = path.subCategories;
+          pageName = path.pageName;
+        }
+        break;
+      default:
+        pageType = bc[0];
+        primaryCategory = bc[0];
+        if (bc.length > 1) {
+          subCategories = bc.slice(1);
+        }
+        break;
+    }
+  }
+
+  dd.page.attributes.queryParameters = window.location.href.split('?')[1] ? window.location.href.split('?')[1].replace(/=/g,':').split('&') : "";
+  dd.page.category.primaryCategory = primaryCategory;
+  dd.page.category.subCategories = subCategories;
+  dd.page.category.contentType = contentType || "";
+  dd.page.category.contentSubType = contentSubType || "";
+  dd.page.category.pageType = pageType || "";
+  dd.page.pageInfo.destinationURL = window.location.href;
+  dd.page.pageInfo.pageName = pageName || bc[0] || "";
+  dd.page.pageInfo.language = document.documentElement.lang ? document.documentElement.lang : "";
+  dd.page.pageInfo.breadCrumbs = [dd.page.category.primaryCategory, dd.page.category.subCategories[0] || ""];
+  dd.page.pageInfo.sysEnv = ( w.innerWidth <= 768 ) ? "tablet" : "desktop";
+
+  var registered = getCookie("rhd_member");
+  dd.user[0].profile[0].profileInfo.registered = registered ? true : false;
+
+  if ( d.referrer ) {
+    var a = d.createElement( "a" );
+    a.href = d.referrer;
+    dd.page.pageInfo.referringDomain = a.hostname;
+    dd.page.pageInfo.referringURL = a.href;
+  }
+
+  var elqGUID = getCookie( "rh_elqCustomerGUID" );
+  if ( elqGUID ) {
+    dd.user[ 0 ].profile[ 0 ].profileInfo.eloquaGUID = elqGUID;
+  }
+
+  var slc = getCookie("rhd-slink-add");
+  if(slc){
+    sendSocialLinkEvent(slc);
+    deleteCookie('rhd-slink-add');
+  }
+
+  function getLearningPathUrlData(windowLocation) {
+    const { pathname } = new URL(windowLocation);
+    const paths = pathname.split('/').filter((el) => el);
+    const [rootPath, secondPath, thirdPath, fourthPath] = paths;
+    const secondPathParams = secondPath ? secondPath.split(':') : []; // [learn, openshift, foundations-openshift]
+    const  fourthPathParams = fourthPath ? fourthPath.split(':') : []; // [resources, build-and-deploy-applications-openshift]
+
+    const [primaryCategory] = secondPathParams;
+
+    const subCategories = [...secondPathParams.slice(1), thirdPath]; // [openshift, founations-openshift, resource]
+    const pageName = fourthPathParams[fourthPathParams.length - 1]; // build-and-deploy-applications-openshift
+
+    return {
+      primaryCategory,
+      subCategories,
+      pageName,
+    };
+  }
+
+  function sendSocialLinkEvent(sprov){
+    var ddSocialLinkEvent = {
+      eventInfo: {
+        eventAction: 'link',
+        eventName: 'social account link',
+        socialAccount: sprov,
+        socialAccountsLinked: dd.user[0].profile[0].profileInfo.socialAccountsLinked,
+        timeStamp: new Date(),
+        processed: {
+          adobeAnalytics: false
+        }
+      }
+    };
+    dd.event.push(ddSocialLinkEvent);
+    sendCustomEvent('socialLinkEvent', ddSocialLinkEvent);
+  }
+
+  function getCookie( name ) {
+    var value = "; " + document.cookie;
+    var parts = value.split( "; " + name + "=" );
+    if ( parts.length == 2 ) {
+      return parts.pop().split( ";" ).shift();
+    }
+  }
+
+  function deleteCookie(name) {
+    document.cookie = name + '=;path=/;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+  };
+} )( window, document, digitalData );
+
+//Attach event listner for search-complete
+window.document.addEventListener("search-complete", function (e) {
+  // Check to see if the data object is on the page if not go no further.
+  if(!window.digitalData) {
+    return;
+  }
+  if (typeof e.detail.invalid === "undefined") {
+    var calcResultCount = e.detail.results.hits
+      ? e.detail.results.hits.total
+      : e.detail.results.numFound;
+    var ddSearchEvent = {
+      eventInfo: {
+        eventName: "internal search",
+        eventAction: "search",
+        listing: {
+          browseFilter: e.detail.filterStr || "internal search",
+          query: e.detail.term,
+          queryMethod: "system generated",
+          resultCount: calcResultCount,
+          resultsShown: e.detail.from,
+          searchType:
+            window.digitalData.page.category.primaryCategory || "",
+          refinement: [],
+        },
+        timeStamp: new Date(),
+        processed: { adobeAnalytics: false },
+      },
+    };
+    window.digitalData.event.push(ddSearchEvent);
+    window.digitalData.page.listing = ddSearchEvent.eventInfo.listing;
+    window.sendCustomEvent("ajaxSearch");
+  }
+});
+</script>
+      <script id="dpal" src="https://www.redhat.com/ma/dpal.js"></script>
+    
+    <meta charset="utf-8" />
+<script id="datalayer-cpx-newsdesk" type="module" data-event="cpx-report" src="/libraries/chapeaux--cpx-newsdesk/newsdesk.js?v=0.9.2"></script>
+<script id="datalayer-page-load-started" type="module" data-event="Page Load Started" src="/libraries/chapeaux--cpx-reporter/reporter.js?v=0.12.0" data-emit="cpx-report">
+    {
+        "analyticsTitle": "Red Hat Developer Homepage",
+        "pageCategory": "homepage",
+        "cms": "RHD CMS 9",
+        "contentID": "204425",
+        "contentType": "assembly_page",
+        "dataObject": "digitalData",
+        "destinationURL": "https://developers.redhat.com/home",
+        "gated": "false",
+        "queryParameters": "",
+        "severityLevel": "",
+        "siteLanguage": "en",
+        "siteName": "rhd",
+        "pageStatus": "Published",
+        "pageSubType": "",
+        "taxonomyAudience": [
+            "9465"
+        ],
+        "taxonomyBusinessUnit": [
+            "9685"
+        ],
+        "taxonomyCampaign": [],
+        "taxonomyCheatSheetTags": [],
+        "taxonomyControlTags": [],
+        "taxonomyEventCategories": [],
+        "taxonomyLifecycle": [],
+        "taxonomyProduct": [
+            "10475"
+        ],
+        "taxonomyProductCategories": [],
+        "taxonomyProductLine": [
+            "10675"
+        ],
+        "taxonomyProject": [
+            "10595",
+            "10635",
+            "10655"
+        ],
+        "taxonomyPromotion": [],
+        "taxonomyRegion": [],
+        "taxonomyStage": [
+            "9585"
+        ],
+        "taxonomyTopics": [
+            "9085",
+            "8935",
+            "9305",
+            "9325",
+            "9365",
+            "9385"
+        ],
+        "taxonomyVideoResourceTags": [],
+        "pageTitle": "Red Hat Developer Homepage | Red Hat Developer",
+        "pageType": "assembly_page",
+        "productCategory": "",
+        "productCertifiedVendor": "",
+        "productComponents": "",
+        "productPublicationStatus": "",
+        "productSBR": "",
+        "productTags": ""
+    }
+</script>
+<link rel="canonical" href="https://developers.redhat.com/home" />
+<link rel="image_src" href="https://developers.redhat.com/sites/default/files/styles/share/public/red-hat-developer-program-2020-build-here-go-anywhere.png?itok=il5htjXQ" />
+<meta name="description" content="Join Red Hat Developer for the software and tutorials to develop hybrid cloud applications using Kubernetes, microservices, serverless and Linux." />
+<meta property="og:determiner" content="the" />
+<meta property="og:site_name" content="Red Hat Developer" />
+<meta property="og:type" content="assembly_page" />
+<meta property="og:url" content="https://developers.redhat.com/home" />
+<meta property="og:title" content="Red Hat Developer Homepage | Red Hat Developer" />
+<meta property="og:description" content="Join Red Hat Developer for the software and tutorials to develop cloud applications using Kubernetes, microservices, serverless and Linux." />
+<meta property="og:image" content="https://developers.redhat.com/sites/default/files/styles/share/public/red-hat-developer-program-2020-build-here-go-anywhere.png?itok=il5htjXQ" />
+<meta property="og:image:secure_url" content="https://developers.redhat.com/sites/default/files/styles/share/public/red-hat-developer-program-2020-build-here-go-anywhere.png?itok=il5htjXQ" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="627" />
+<meta property="og:updated_time" content="2023-01-10T20:24:42+0000" />
+<meta property="og:image:alt" content="Cloud Developer Tutorials and Software from Red Hat" />
+<meta property="article:publisher" content="https://www.facebook.com/RedHatDeveloperProgram" />
+<meta property="article:section" content="C" />
+<meta property="article:tag" content=".NET" />
+<meta property="article:tag" content="C" />
+<meta property="article:tag" content="Developer Tools" />
+<meta property="article:tag" content="IDEs" />
+<meta property="article:tag" content="Open Source" />
+<meta property="article:tag" content="Secure Coding" />
+<meta property="article:published_time" content="2018-04-09T13:18:21+0000" />
+<meta property="article:modified_time" content="2023-01-10T20:24:42+0000" />
+<meta name="rhd:node-type" content="web_page" />
+<meta name="rhd:taxonomy-product" content="Developer Toolset" />
+<meta name="rhd:taxonomy-product-line" content="CodeReady" />
+<meta name="rhd:taxonomy-topic" content=".NET" />
+<meta name="rhd:taxonomy-topic" content="C" />
+<meta name="rhd:taxonomy-topic" content="Developer Tools" />
+<meta name="rhd:taxonomy-topic" content="IDEs" />
+<meta name="rhd:taxonomy-topic" content="Open Source" />
+<meta name="rhd:taxonomy-topic" content="Secure Coding" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@rhdevelopers" />
+<meta name="twitter:title" content="Red Hat Developer Homepage | Red Hat Developer" />
+<meta name="twitter:site:id" content="3249871370" />
+<meta name="twitter:creator" content="@rhdevelopers" />
+<meta name="twitter:url" content="https://developers.redhat.com/home" />
+<meta name="twitter:image:alt" content="Cloud Developer Tutorials and Software from Red Hat" />
+<meta name="twitter:image:height" content="627" />
+<meta name="twitter:image:width" content="1200" />
+<meta name="twitter:image" content="https://developers.redhat.com/sites/default/files/styles/share/public/red-hat-developer-program-2020-build-here-go-anywhere.png?itok=il5htjXQ" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json" id="schema-metatag">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "ImageObject",
+            "url": "https://developers.redhat.com/themes/custom/rhdp2/images/metatags/metatag-image-global-rhd-2020.png",
+            "height": "630",
+            "width": "1200"
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://developers.redhat.com/#organization",
+            "name": "Red Hat",
+            "sameAs": [
+                "https://www.facebook.com/RedHatDeveloperProgram/",
+                "https://twitter.com/rhdevelopers"
+            ],
+            "url": "https://developers.redhat.com/",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://developers.redhat.com/themes/custom/rhdp2/logo.svg"
+            },
+            "logo": {
+                "@type": "ImageObject",
+                "representativeOfPage": "False",
+                "url": "https://developers.redhat.com/themes/custom/rhdp2/logo.svg",
+                "width": "540",
+                "height": "174"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "100 East Davie Street",
+                "addressLocality": "Raleigh",
+                "addressRegion": "North Carolina",
+                "postalCode": "27601",
+                "addressCountry": "USA"
+            }
+        },
+        {
+            "@type": "Person",
+            "url": "https://developers.redhat.com/"
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://developers.redhat.com/home#webpage",
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://developers.redhat.com/#organization"
+            },
+            "isAccessibleForFree": "True",
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://developers.redhat.com/#website",
+            "name": "Red Hat Developer",
+            "url": "https://developers.redhat.com/",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://developers.redhat.com/search?t={search_term_string}",
+                    "inLanguage": "en-US"
+                },
+                "query": "https://developers.redhat.com/search?t={search_term_string}",
+                "query-input": "required name=search_term_string"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://developers.redhat.com/#organization"
+            },
+            "inLanguage": "en-US"
+        }
+    ]
+}</script>
+<link rel="icon" href="/themes/custom/rhdp2/favicons/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/themes/custom/rhdp2/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/themes/custom/rhdp2/favicons/apple-touch-icon-ipad-retina.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/themes/custom/rhdp2/favicons/apple-touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/themes/custom/rhdp2/favicons/apple-touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/themes/custom/rhdp2/favicons/apple-touch-icon-iphone.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/themes/custom/rhdp2/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/themes/custom/rhdp2/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/themes/custom/rhdp2/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/themes/custom/rhdp2/favicons/safari-pinned-tab.svg" color="#da532c">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/themes/custom/rhdp2/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_ko8u6KY3E1reOx-qYlxOH21ge-GJLMbeUo5JUOt9fPw.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_xaGTYr_FGVHLW2jn29j54JCC5FZNDOilRb7L2SpdZYw.css" />
+
+
+    <script src="/libraries/chapeaux--cpx-reporter/cpx-reporter.js?v=0.12.0" type="module"></script>
+<script src="/libraries/chapeaux--cpx-user/cpx-user.js?v=0.8.5" type="module"></script>
+<script src="/libraries/chapeaux--cpx-cookie/cpx-cookie.js?v=0.11.0" type="module"></script>
+
+    <noscript>
+      <style>body[unresolved][unresolved]{opacity:1;}</style>
+    </noscript>
+          <script type="text/javascript" src="/modules/contrib/seckit/js/seckit.document_write.js"></script>
+        <link type="text/css" rel="stylesheet" id="seckit-clickjacking-no-body" media="all" href="/modules/contrib/seckit/css/seckit.no_body.css" />
+        <!-- stop SecKit protection -->
+        <noscript>
+        <link type="text/css" rel="stylesheet" id="seckit-clickjacking-noscript-tag" media="all" href="/modules/contrib/seckit/css/seckit.noscript_tag.css" />
+        <div id="seckit-noscript-tag">
+          Sorry, you need to enable JavaScript to visit this website.
+        </div>
+        </noscript></head>
+  <body class="path-frontpage page-node-type-assembly-page page-home" id="rhd-page-body" unresolved>
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div id="rlc">
+    <header role="banner">
+    
+          <div class="rhd-universal-header">
+      
+  <pfe-navigation data-analytics-region="mega menu" id="pfe-navigation" role="banner"> <nav data-analytics-region="main nav" role="navigation" aria-label="Main Navigation"  id="block-redhatuniversalnavigation" data-block-plugin-id="system_menu_block:red-hat-universal-navigation" class="pfe-navigation">
+    <div class="pfe-navigation__logo-wrapper" id="pfe-navigation__logo-wrapper">
+      <a href="/" class="pfe-navigation__logo-link" data-analytics-text="Logo" data-analytics-category="Logo" data-analytics-level="1">
+        <img class="pfe-navigation__logo-image" src="/modules/contrib/red_hat_universal_navigation/images/NewRHDLogo_RHD_reverse.svg" alt="Redhat Developers  Logo"/>
+      </a>
+    </div>
+              
+
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+                                  
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                              <ul class="pfe-navigation__menu" id="pfe-navigation__menu">
+              
+                          
+                  <li class="pfe-navigation__menu-item view_mode_has_three_columns">
+                                            <a href="" class="pfe-navigation__menu-link view_mode_has_three_columns" data-analytics-level="1" data-analytics-text="Start building apps" data-analytics-category="Start building apps">Start building apps</a>
+                                                                                <div  class="pfe-navigation__dropdown pfe-navigation__dropdown--3-column view_mode_has_three_columns" style="">
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+                                            
+                          
+                                                    <div  style="">
+                    <h3>Try Red Hat products now</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_feature">
+                                            <a href="/developer-sandbox" class="view_mode_feature" data-analytics-level="2" data-analytics-text="Developer Sandbox for Red Hat OpenShift" data-analytics-category="Start building apps|Try Red Hat products now" data-drupal-link-system-path="node/267151">Developer Sandbox for Red Hat OpenShift</a>
+                                                      
+
+          <div class="field field--name-field-feature-text field--type-string-long field--label-hidden field__items">
+      <div class="field__item">Try Red Hat&#039;s products and technologies without setup or configuration free for 30 days with this shared OpenShift and Kubernetes cluster. </div>
+</div>
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+            
+                          
+                                                    <div  style="">
+                    <h3>Hands-on learning</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_feature">
+                                            <a href="/learn" class="view_mode_feature" data-analytics-level="2" data-analytics-text="Learning paths" data-analytics-category="Start building apps|Hands-on learning" data-drupal-link-system-path="node/263961">Learning paths</a>
+                                                      
+
+          <div class="field field--name-field-feature-text field--type-string-long field--label-hidden field__items">
+      <div class="field__item">Customize your learning to align with your needs and make the most of your time by exploring our massive collection of paths and lessons.</div>
+</div>
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+            
+                          
+                                                    <div  style="">
+                    <h3>Looking for more?</h3>
+                          
+
+          
+    
+
+
+                        </div>
+                                                        
+
+
+    
+
+
+                        </div>
+                          </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+                                  
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="pfe-navigation__menu-item view_mode_has_columns">
+                                            <a href="" class="pfe-navigation__menu-link view_mode_has_columns" data-analytics-level="1" data-analytics-text="Products &amp; technologies" data-analytics-category="Products &amp; technologies">Products &amp; technologies</a>
+                                                                                <div  class="pfe-navigation__dropdown view_mode_has_columns" style="">
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+                                            
+                          
+                                                    <div  style="">
+                    <h3>Linux</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_feature">
+                                            <a href="/node/222775" class="view_mode_feature" data-analytics-level="2" data-analytics-text="Red Hat Enterprise Linux" data-analytics-category="Products &amp; technologies|Linux" data-drupal-link-system-path="node/222775">Red Hat Enterprise Linux</a>
+                                                      
+
+          <div class="field field--name-field-feature-text field--type-string-long field--label-hidden field__items">
+      <div class="field__item">A stable, proven foundation that&#039;s versatile enough for rolling out new applications, virtualizing environments, and creating a secure hybrid cloud.</div>
+</div>
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/products/rhel/ubi" class="view_mode_default" data-analytics-level="2" data-analytics-text="Red Hat Universal Base Images (UBI)" data-analytics-category="Products &amp; technologies|Linux" data-drupal-link-system-path="node/210625">Red Hat Universal Base Images (UBI)</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/topics/containers" class="view_mode_default" data-analytics-level="2" data-analytics-text="Containers" data-analytics-category="Products &amp; technologies|Linux" data-drupal-link-system-path="node/206625">Containers</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+            
+                          
+                                                    <div  style="">
+                    <h3>Cloud-native</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_feature">
+                                            <a href="/node/218395" class="view_mode_feature" data-analytics-level="2" data-analytics-text="Red Hat OpenShift" data-analytics-category="Products &amp; technologies|Cloud-native" data-drupal-link-system-path="node/218395">Red Hat OpenShift</a>
+                                                      
+
+          <div class="field field--name-field-feature-text field--type-string-long field--label-hidden field__items">
+      <div class="field__item">Open, hybrid-cloud Kubernetes platform to build, run, and scale container-based applications -- now with developer tools, CI/CD, and release management.</div>
+</div>
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/topics/kubernetes" class="view_mode_default" data-analytics-level="2" data-analytics-text="Kubernetes" data-analytics-category="Products &amp; technologies|Cloud-native" data-drupal-link-system-path="node/218935">Kubernetes</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/node/270631" class="view_mode_default" data-analytics-level="2" data-analytics-text="Red Hat Integration" data-analytics-category="Products &amp; technologies|Cloud-native" data-drupal-link-system-path="node/270631">Red Hat Integration</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/app-dev-platform" class="view_mode_default" data-analytics-level="2" data-analytics-text="Cloud Native Application Development and Delivery Platform" data-analytics-category="Products &amp; technologies|Cloud-native" data-drupal-link-system-path="node/280141">Cloud Native Application Development and Delivery Platform</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+            
+                          
+                                                    <div  style="">
+                    <h3>Automation</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_feature">
+                                            <a href="/node/224071" class="view_mode_feature" data-analytics-level="2" data-analytics-text="Red Hat Ansible Automation Platform" data-analytics-category="Products &amp; technologies|Automation" data-drupal-link-system-path="node/224071">Red Hat Ansible Automation Platform</a>
+                                                      
+
+          <div class="field field--name-field-feature-text field--type-string-long field--label-hidden field__items">
+      <div class="field__item">Automate your cloud provisioning, application deployment, configuration management, and more with this simple yet powerful automation engine</div>
+</div>
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/topics/ci-cd" class="view_mode_default" data-analytics-level="2" data-analytics-text="CI/CD" data-analytics-category="Products &amp; technologies|Automation" data-drupal-link-system-path="node/218875">CI/CD</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/topics/devops" class="view_mode_default" data-analytics-level="2" data-analytics-text="DevOps" data-analytics-category="Products &amp; technologies|Automation" data-drupal-link-system-path="node/204635">DevOps</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+            
+                          
+                                                    <div  style="">
+                    <h3>Java</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_feature">
+                                            <a href="/java/runtimes-and-frameworks" class="view_mode_feature" data-analytics-level="2" data-analytics-text="Java runtimes and frameworks" data-analytics-category="Products &amp; technologies|Java" data-drupal-link-system-path="node/275541">Java runtimes and frameworks</a>
+                                                      
+
+          <div class="field field--name-field-feature-text field--type-string-long field--label-hidden field__items">
+      <div class="field__item">Deploy your application safely and securely into your production environment without system or resource limitations.</div>
+</div>
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/java" class="view_mode_default" data-analytics-level="2" data-analytics-text="Java for developers" data-analytics-category="Products &amp; technologies|Java" data-drupal-link-system-path="node/275481">Java for developers</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/topics/event-driven" class="view_mode_default" data-analytics-level="2" data-analytics-text="Event-driven architecture" data-analytics-category="Products &amp; technologies|Java" data-drupal-link-system-path="node/211965">Event-driven architecture</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/node/219015" class="view_mode_default" data-analytics-level="2" data-analytics-text="Quarkus" data-analytics-category="Products &amp; technologies|Java" data-drupal-link-system-path="node/219015">Quarkus</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+            
+                          
+                                                    <div  style="">
+                    <h3>Looking for more</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_primary_call_to_action">
+                                                        <pfe-cta pfe-priority="primary">
+              <a href="/products" data-analytics-linkType="cta" data-analytics-level="2" data-analytics-text="See all Red Hat Products" data-analytics-category="Products &amp; technologies|Looking for more" data-drupal-link-system-path="node/204465">See all Red Hat Products</a>
+            </pfe-cta>
+                                          
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                                  
+                  
+            
+                          
+                                                    <div  style="margin-top: var(--rh-custom-column-top-margin);">
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_secondary_call_to_action">
+                                                        <pfe-cta pfe-priority="secondary">
+              <a href="/topics" data-analytics-linkType="cta" data-analytics-level="2" data-analytics-text="Browse all technologies" data-analytics-category="Products &amp; technologies|extra column for P+T" data-drupal-link-system-path="node/283525">Browse all technologies</a>
+            </pfe-cta>
+                                          
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                        
+
+
+    
+
+
+                        </div>
+                          </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+                                  
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="pfe-navigation__menu-item view_mode_has_three_columns">
+                                            <a href="" class="pfe-navigation__menu-link view_mode_has_three_columns" data-analytics-level="1" data-analytics-text="Events" data-analytics-category="Events">Events</a>
+                                                                                <div  class="pfe-navigation__dropdown pfe-navigation__dropdown--3-column view_mode_has_three_columns" style="">
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+                                            
+                          
+                                                    <div  style="">
+                    <h3>Join the DevNation community</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_feature">
+                                            <a href="/devnation" class="view_mode_feature" data-analytics-level="2" data-analytics-text="DevNation events calendar" data-analytics-category="Events|Join the DevNation community" data-drupal-link-system-path="node/206785">DevNation events calendar</a>
+                                                      
+
+          <div class="field field--name-field-feature-text field--type-string-long field--label-hidden field__items">
+      <div class="field__item">Join us for online events, or attend regional events held around the world—you&#039;ll meet peers, industry leaders, and Red Hat&#039;s Developer Evangelists and OpenShift Developer Advocates.</div>
+</div>
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+            
+                          
+                                                    <div  style="">
+                    <h3>Looking for more?</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_primary_call_to_action">
+                                                        <pfe-cta pfe-priority="primary">
+              <a href="/events" data-analytics-linkType="cta" data-analytics-level="2" data-analytics-text="Explore all developer events" data-analytics-category="Events|Looking for more?" data-drupal-link-system-path="node/276891">Explore all developer events</a>
+            </pfe-cta>
+                                          
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                        
+
+
+    
+
+
+                        </div>
+                          </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+                                  
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="pfe-navigation__menu-item view_mode_has_three_columns">
+                                            <a href="" class="pfe-navigation__menu-link view_mode_has_three_columns" data-analytics-level="1" data-analytics-text="Learn" data-analytics-category="Learn">Learn</a>
+                                                                                <div  class="pfe-navigation__dropdown pfe-navigation__dropdown--3-column view_mode_has_three_columns" style="">
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+                                            
+                          
+                                                    <div  style="">
+                    <h3>Featured free learning paths</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_default">
+                                            <a href="/learn/openshift" class="view_mode_default" data-analytics-level="2" data-analytics-text="Openshift &amp; Kubernetes learning " data-analytics-category="Learn|Featured free learning paths" data-drupal-link-system-path="node/264181">Openshift &amp; Kubernetes learning </a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/learn/openshift-data-science" class="view_mode_default" data-analytics-level="2" data-analytics-text="OpenShift Data Science learning" data-analytics-category="Learn|Featured free learning paths" data-drupal-link-system-path="node/272351">OpenShift Data Science learning</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/products/red-hat-openshift-streams-for-apache-kafka/hello-kafka" class="view_mode_default" data-analytics-level="2" data-analytics-text="OpenShift Streams for Apache Kafka learning" data-analytics-category="Learn|Featured free learning paths" data-drupal-link-system-path="node/273191">OpenShift Streams for Apache Kafka learning</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/products/red-hat-openshift-api-management/rhoam-step-by-step" class="view_mode_default" data-analytics-level="2" data-analytics-text="OpenShift API Management learning" data-analytics-category="Learn|Featured free learning paths" data-drupal-link-system-path="node/276851">OpenShift API Management learning</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+            
+                          
+                                                    <div  style="">
+                    <h3>More developer resources</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_default">
+                                            <a href="/cheat-sheets" class="view_mode_default" data-analytics-level="2" data-analytics-text="Cheat sheets" data-analytics-category="Learn|More developer resources" data-drupal-link-system-path="node/267111">Cheat sheets</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/e-books" class="view_mode_default" data-analytics-level="2" data-analytics-text="E-books" data-analytics-category="Learn|More developer resources" data-drupal-link-system-path="node/267101">E-books</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/learn#assembly-id-70181" class="view_mode_default" data-analytics-level="2" data-analytics-text="Interactive tutorials" data-analytics-category="Learn|More developer resources" data-drupal-link-system-path="node/263961">Interactive tutorials</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/blog" class="view_mode_default" data-analytics-level="2" data-analytics-text="Blogs and articles" data-analytics-category="Learn|More developer resources" data-drupal-link-system-path="node/277891">Blogs and articles</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+            
+                          
+                                                    <div  style="">
+                    <h3>Looking for more?</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_primary_call_to_action">
+                                                        <pfe-cta pfe-priority="primary">
+              <a href="/learn" data-analytics-linkType="cta" data-analytics-level="2" data-analytics-text="Start learning now" data-analytics-category="Learn|Looking for more?" data-drupal-link-system-path="node/263961">Start learning now</a>
+            </pfe-cta>
+                                          
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                        
+
+
+    
+
+
+                        </div>
+                          </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+                                  
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="pfe-navigation__menu-item view_mode_has_three_columns">
+                                            <a href="" class="pfe-navigation__menu-link view_mode_has_three_columns" data-analytics-level="1" data-analytics-text="OpenShift sandbox" data-analytics-category="OpenShift sandbox">OpenShift sandbox</a>
+                                                                                <div  class="pfe-navigation__dropdown pfe-navigation__dropdown--3-column view_mode_has_three_columns" style="">
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+                                            
+                          
+                                                    <div  style="">
+                    <h3>OpenShift developer sandbox (free)</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_feature">
+                                            <a href="/developer-sandbox/activities" class="view_mode_feature" data-analytics-level="2" data-analytics-text="Try hands-on activities in the OpenShift Sandbox" data-analytics-category="OpenShift sandbox|OpenShift developer sandbox (free)" data-drupal-link-system-path="node/226191">Try hands-on activities in the OpenShift Sandbox</a>
+                                                      
+
+          <div class="field field--name-field-feature-text field--type-string-long field--label-hidden field__items">
+      <div class="field__item">Access Red Hat’s products and technologies without setup or configuration, and start developing quicker than ever before with our new, no-cost sandbox environments. </div>
+</div>
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/developer-sandbox/ide" class="view_mode_default" data-analytics-level="2" data-analytics-text="Explore the sandbox IDE" data-analytics-category="OpenShift sandbox|OpenShift developer sandbox (free)" data-drupal-link-system-path="node/267161">Explore the sandbox IDE</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+            
+                          
+                                                    <div  style="">
+                    <h3>Featured sandbox activities</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_default">
+                                            <a href="/developer-sandbox/activities/how-to-deploy-java-application-in-kubernetes" class="view_mode_default" data-analytics-level="2" data-analytics-text="Deploy a Java application on Kubernetes in minutes" data-analytics-category="OpenShift sandbox|Featured sandbox activities" data-drupal-link-system-path="node/226201">Deploy a Java application on Kubernetes in minutes</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/developer-sandbox/activities/learn-kubernetes-using-red-hat-developer-sandbox-openshift" class="view_mode_default" data-analytics-level="2" data-analytics-text="Learn Kubernetes using the OpenShift sandbox" data-analytics-category="OpenShift sandbox|Featured sandbox activities" data-drupal-link-system-path="node/263951">Learn Kubernetes using the OpenShift sandbox</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/developer-sandbox/activities/deploying-full-stack-javascript-applications-to-the-sandbox/part1" class="view_mode_default" data-analytics-level="2" data-analytics-text="Deploy full-stack JavaScript apps to the Sandbox" data-analytics-category="OpenShift sandbox|Featured sandbox activities" data-drupal-link-system-path="node/264211">Deploy full-stack JavaScript apps to the Sandbox</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+            
+                          
+                                                    <div  style="">
+                    <h3>Ready to  start developing apps?</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_primary_call_to_action">
+                                                        <pfe-cta pfe-priority="primary">
+              <a href="/developer-sandbox" data-analytics-linkType="cta" data-analytics-level="2" data-analytics-text="Explore the free OpenShift Sandbox" data-analytics-category="OpenShift sandbox|Ready to  start developing apps?" data-drupal-link-system-path="node/267151">Explore the free OpenShift Sandbox</a>
+            </pfe-cta>
+                                          
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                        
+
+
+    
+
+
+                        </div>
+                          </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+                                  
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="pfe-navigation__menu-item view_mode_has_three_columns">
+                                            <a href="" class="pfe-navigation__menu-link view_mode_has_three_columns" data-analytics-level="1" data-analytics-text="DevNation" data-analytics-category="DevNation">DevNation</a>
+                                                                                <div  class="pfe-navigation__dropdown pfe-navigation__dropdown--3-column view_mode_has_three_columns" style="">
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+                                            
+                          
+                                                    <div  style="">
+                    <h3>Explore the community</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_feature">
+                                            <a href="/devnation" class="view_mode_feature" data-analytics-level="2" data-analytics-text="What’s DevNation?" data-analytics-category="DevNation|Explore the community" data-drupal-link-system-path="node/206785">What’s DevNation?</a>
+                                                      
+
+          <div class="field field--name-field-feature-text field--type-string-long field--label-hidden field__items">
+      <div class="field__item">Join developers across the globe for live and virtual events led by Red Hat technology experts. </div>
+</div>
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/devnation/deep-dive" class="view_mode_default" data-analytics-level="2" data-analytics-text="Deep Dives" data-analytics-category="DevNation|Explore the community" data-drupal-link-system-path="node/217155">Deep Dives</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/devnation/tech-talks" class="view_mode_default" data-analytics-level="2" data-analytics-text="Tech Talks" data-analytics-category="DevNation|Explore the community" data-drupal-link-system-path="node/217135">Tech Talks</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/devnation/the-show" class="view_mode_default" data-analytics-level="2" data-analytics-text="The Show" data-analytics-category="DevNation|Explore the community" data-drupal-link-system-path="node/223291">The Show</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+            
+                          
+                                                    <div  style="">
+                    <h3>Upstream communities</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_default">
+                                            <a href="/topics/camel-k" class="view_mode_default" data-analytics-level="2" data-analytics-text="Camel K" data-analytics-category="DevNation|Upstream communities" data-drupal-link-system-path="node/223721">Camel K</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/products/rhel/centos-and-rhel" class="view_mode_default" data-analytics-level="2" data-analytics-text="CentOS" data-analytics-category="DevNation|Upstream communities" data-drupal-link-system-path="node/274191">CentOS</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/topics/service-mesh" class="view_mode_default" data-analytics-level="2" data-analytics-text="Istio" data-analytics-category="DevNation|Upstream communities" data-drupal-link-system-path="node/204655">Istio</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="view_mode_default">
+                                            <a href="/node/219015" class="view_mode_default" data-analytics-level="2" data-analytics-text="Quarkus" data-analytics-category="DevNation|Upstream communities" data-drupal-link-system-path="node/219015">Quarkus</a>
+                                                      
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                          
+            
+                  
+            
+                          
+                                                    <div  style="">
+                    <h3>Looking for more DevNation?</h3>
+                          
+
+          
+                      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+                                        <ul>
+                        
+                          
+                  <li class="view_mode_primary_call_to_action">
+                                                        <pfe-cta pfe-priority="primary">
+              <a href="/devnation" data-analytics-linkType="cta" data-analytics-level="2" data-analytics-text="Explore DevNation" data-analytics-category="DevNation|Looking for more DevNation?" data-drupal-link-system-path="node/206785">Explore DevNation</a>
+            </pfe-cta>
+                                          
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+
+    
+
+
+                        </div>
+                                                        
+
+
+    
+
+
+                        </div>
+                          </li>
+                                                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+                  
+            
+                          
+                  <li class="pfe-navigation__menu-item view_mode_default">
+                                            <a href="/blog" class="pfe-navigation__menu-link view_mode_default" data-analytics-level="1" data-analytics-text="Blog" data-analytics-category="Blog" data-drupal-link-system-path="node/277891">Blog</a>
+                                                                                
+
+          
+    
+
+
+                                  </li>
+                                  </ul>
+                        
+
+      </nav>
+
+      <!-- Site Search -->
+    <div slot="search" class="pfe-navigation__search pfe-navigation__search--default-styles">
+      <form action="/search" method="get">
+        <label for="pfe-navigation__search-label-universal">Search</label>
+        <input id="pfe-navigation__search-label-universal" name="t" type="text" placeholder="Enter your search term"/>
+                <button>Search</button>
+      </form>
+    </div>
+    <!-- End Site Search -->
+  
+  <!-- Custom Button -->
+    <!-- End Custom Button -->
+
+          <!-- User Account --><rh-account-dropdown slot="account" tmp-login-link="javascript:document.dispatchEvent(new Event(&#039;keycloakRhdLogin&#039;));" tmp-logout-link="javascript:document.dispatchEvent(new Event(&#039;keycloakRhdLogout&#039;));"  environment=""> </rh-account-dropdown>
+    <!-- End User Account -->
+        <!-- Site switcher -->
+    <div slot="secondary-links" class="pfe-navigation__site-switcher">
+      <button class="pfe-navigation__secondary-link" data-analytics-text="All Red Hat" data-analytics-category="All Red Hat" data-analytics-level="1">
+        <pfe-icon icon="web-icon-grid-3x3" size="sm" aria-hidden="true"></pfe-icon>
+        <!-- @todo Make sure to make string translateable -->
+        All Red Hat
+      </button>
+      <pfe-navigation-dropdown dropdown-width="full">
+        <site-switcher></site-switcher>
+      </pfe-navigation-dropdown>
+    </div>
+    <!-- End Site switcher -->
+  </pfe-navigation>
+<style>:root
+{
+  --rh-custom-column-top-margin: 41px;
+}
+@media(max-width: 1200px){:root {
+  --rh-custom-column-top-margin: 0;
+}
+}</style><!-- Override the all site selected site -->
+<style>
+  site-switcher {
+    --developers--logo: var(--developers--logo--you-are-here);
+    --developers--backgroundColor: var(--background--you-are-here);
+    --developers--label: var(--label--you-are-here);
+    --developers--margin-top: 0;
+    --rhdc--logo: initial;
+    --rhdc--backgroundColor: initial;
+    --rhdc--label: initial;
+    --rhdc--margin-top: initial;
+  }
+</style>
+<!-- End Override the all site selected site -->
+  
+  
+
+
+  </div>
+
+        
+    </header>
+    <main role="main">
+        <a id="main-content" tabindex="-1"></a>
+                <div class="rhd-layout-content">
+            
+  <div class="region region-title">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+            
+  <div class="region region-content">
+    
+<div id="block-rhdp2-content" data-block-plugin-id="system_main_block" class="block block-system block-system-main-block">
+  
+    
+      <div>
+    
+
+
+<article role="article" about="/home" class="node node--type-assembly-page node--view-mode-full pf-c-content">
+
+  
+  
+      <div class="node__content">
+        
+
+
+  
+<div class="dark content-hero four-up no-margin-top no-margin-bottom assembly assembly-type-static_content_band component rhd-c-card-grid pf-c-content" id="assembly-field-sections-78361">
+  <div class="component-limit-width">
+        <div class="pf-l-flex">
+      <h2 class="pf-c-title">Build here. Go anywhere.</h2>
+    </div>
+            <div class="pf-l-flex rhd-c-card-grid__wrapper">
+                  
+
+<div  class="rhd-c-tile assembly assembly-type-static_item pf-c-card rhd-c-card" id="assembly-field-content-list-78351">
+      <a href="/topics" >
+  
+      <img loading="eager" entity_type="assembly" entity_bundle="static_item" parent_field_name="field_image" src="/sites/default/files/styles/large/public/homepage-topics.png?itok=HKNXDgm8" alt="topics" typeof="foaf:Image" class="rhd-c-card__image" />
+
+
+
+  
+  
+  
+  
+  <div class="rhd-c-card-content">
+                                                  
+        <h3 class="rhd-c-card__title">
+                    Browse topics
+                </h3>
+        
+                
+    
+    
+    
+    
+      </div>
+      </a>
+  </div>
+
+              
+
+<div  class="rhd-c-tile assembly assembly-type-static_item pf-c-card rhd-c-card" id="assembly-field-content-list-78371">
+      <a href="/products" >
+  
+      <img loading="eager" entity_type="assembly" entity_bundle="static_item" parent_field_name="field_image" src="/sites/default/files/styles/large/public/homepage-products.png?itok=gGo4NFLj" alt="products" typeof="foaf:Image" class="rhd-c-card__image" />
+
+
+
+  
+  
+  
+  
+  <div class="rhd-c-card-content">
+                                                  
+        <h3 class="rhd-c-card__title">
+                    Explore products
+                </h3>
+        
+                
+    
+    
+    
+    
+      </div>
+      </a>
+  </div>
+
+              
+
+<div  class="rhd-c-tile assembly assembly-type-static_item pf-c-card rhd-c-card" id="assembly-field-content-list-78381">
+      <a href="/getting-started" >
+  
+      <img loading="eager" entity_type="assembly" entity_bundle="static_item" parent_field_name="field_image" src="/sites/default/files/styles/large/public/homepage-applications.png?itok=WHrLqui7" alt="applications" typeof="foaf:Image" class="rhd-c-card__image" />
+
+
+
+  
+  
+  
+  
+  <div class="rhd-c-card-content">
+                                                  
+        <h3 class="rhd-c-card__title">
+                    Develop applications
+                </h3>
+        
+                
+    
+    
+    
+    
+      </div>
+      </a>
+  </div>
+
+              
+
+<div  class="rhd-c-tile assembly assembly-type-static_item pf-c-card rhd-c-card" id="assembly-field-content-list-78391">
+      <a href="/developer-sandbox" >
+  
+      <img loading="eager" entity_type="assembly" entity_bundle="static_item" parent_field_name="field_image" src="/sites/default/files/styles/large/public/homepage-sandbox.png?itok=p7EzXzy_" alt="sandbox" typeof="foaf:Image" class="rhd-c-card__image" />
+
+
+
+  
+  
+  
+  
+  <div class="rhd-c-card-content">
+                                                  
+        <h3 class="rhd-c-card__title">
+                    Build on the sandbox
+                </h3>
+        
+                
+    
+    
+    
+    
+      </div>
+      </a>
+  </div>
+
+      
+    </div>
+          <div class="pf-l-flex rhd-c-card-grid__cta">
+            </div>
+      </div>
+</div>
+
+
+<section class="left-sidebar assembly assembly-type-layout_two_col_left_sidebar component rhd-c-two-col-hero-layout" id="assembly-field-sections-29545">
+  
+  <div class="pf-l-grid pf-m-gutter">
+    <div class="pf-l-grid__item field field--name-field-column-1 field--type-entity-reference field--label-hidden field__items">
+
+<div  id="assembly-field-column-1-29535" class="assembly assembly-type-compact_dynamic_article_list component rhd-c-dynamic-content-list-compact">
+  
+  <div class="pf-l-grid">
+          <h2 class="pf-c-title field__item">Latest articles</h2>
+
+    <div class="pf-l-grid__item pf-m-12-col">
+      <div>
+<div role="article" about="/articles/2023/01/12/how-autoscale-saas-application-infrastructure" level="Unclassified" class="pf-c-card rhd-c-card__list">
+  <div class="rhd-c-card-content">
+    <h3 class="rhd-c-card__title">
+      <a href="/articles/2023/01/12/how-autoscale-saas-application-infrastructure"><span>How to autoscale your SaaS application infrastructure</span>
+</a>
+			    </h3>
+  </div>
+</div>
+
+<div role="article" about="/articles/2023/01/11/fine-grained-authorization-quarkus-microservices" level="Unclassified" class="pf-c-card rhd-c-card__list">
+  <div class="rhd-c-card-content">
+    <h3 class="rhd-c-card__title">
+      <a href="/articles/2023/01/11/fine-grained-authorization-quarkus-microservices"><span>Fine-grained authorization for Quarkus microservices</span>
+</a>
+			    </h3>
+  </div>
+</div>
+
+<div role="article" about="/articles/2023/01/11/5-new-advanced-features-improving-c-11" level="Unclassified" class="pf-c-card rhd-c-card__list">
+  <div class="rhd-c-card-content">
+    <h3 class="rhd-c-card__title">
+      <a href="/articles/2023/01/11/5-new-advanced-features-improving-c-11"><span>Some more C# 11</span>
+</a>
+			    </h3>
+  </div>
+</div>
+
+<div role="article" about="/articles/2023/01/11/developers-guide-using-openshift-kubernetes" level="Unclassified" class="pf-c-card rhd-c-card__list">
+  <div class="rhd-c-card-content">
+    <h3 class="rhd-c-card__title">
+      <a href="/articles/2023/01/11/developers-guide-using-openshift-kubernetes"><span>A developer&#039;s guide to using OpenShift with Kubernetes</span>
+</a>
+			    </h3>
+  </div>
+</div>
+
+<div role="article" about="/articles/2023/01/10/automate-devices-using-ansible-cip" level="Unclassified" class="pf-c-card rhd-c-card__list">
+  <div class="rhd-c-card-content">
+    <h3 class="rhd-c-card__title">
+      <a href="/articles/2023/01/10/automate-devices-using-ansible-cip"><span>How to automate devices using the Ansible CIP collection</span>
+</a>
+			    </h3>
+  </div>
+</div>
+
+<div role="article" about="/articles/2023/01/09/how-use-valgrind-track-file-descriptors" level="Unclassified" class="pf-c-card rhd-c-card__list">
+  <div class="rhd-c-card-content">
+    <h3 class="rhd-c-card__title">
+      <a href="/articles/2023/01/09/how-use-valgrind-track-file-descriptors"><span>How to use Valgrind to track file descriptors</span>
+</a>
+			    </h3>
+  </div>
+</div>
+
+<div role="article" about="/articles/2023/01/09/how-run-correct-java-version-after-update" level="Unclassified" class="pf-c-card rhd-c-card__list">
+  <div class="rhd-c-card-content">
+    <h3 class="rhd-c-card__title">
+      <a href="/articles/2023/01/09/how-run-correct-java-version-after-update"><span>How to run the correct Java version after an update</span>
+</a>
+			    </h3>
+  </div>
+</div>
+
+<div role="article" about="/articles/2023/01/05/how-use-fabric8-kubernetes-client" level="Unclassified" class="pf-c-card rhd-c-card__list">
+  <div class="rhd-c-card-content">
+    <h3 class="rhd-c-card__title">
+      <a href="/articles/2023/01/05/how-use-fabric8-kubernetes-client"><span>How to use Kubernetes dynamic client with Fabric8</span>
+</a>
+			    </h3>
+  </div>
+</div>
+</div>
+
+      <a href="https://developers.redhat.com/new?page=0" class="pf-c-button pf-m-secondary" data-analytics-linkType="cta" data-analytics-text="View more">View more</a>
+    </div>
+  </div>
+</div>
+</div>
+    <div class="pf-l-grid__item field field--name-field-column-2 field--type-entity-reference field--label-hidden field__items">
+<div class="dark assembly assembly-type-content_with_image component has-background rich-text pf-c-content" id="assembly-field-column-2-92841" style="background-image: url(/sites/default/files/styles/billboard/public/blue%20backgound_resized-01.png?itok=94tFT6fj);">
+  
+  <div class="pf-l-grid pf-m-gutter">
+    <div class="pf-l-grid__item pf-m-5-col-on-lg pf-m-12-col-on-sm rhd-image-column">
+        <img loading="lazy" src="/sites/default/files/styles/large/public/sandbox-hero-graphic-new_0.png?itok=Qk8gJOAV" width="480" height="244" alt="Sandbox imagery" typeof="foaf:Image" class="rhd-c-card__image-body" />
+
+
+
+    </div>
+    <div class="pf-l-grid__item pf-m-7-col-on-lg pf-m-12-col-on-sm">
+      <div class="rich-text-content">
+                <h2 class="Indent1">Build an app in our no-cost sandbox</h2>
+
+<p class="Indent1"><strong>Learn and experiment with Kubernetes and Red Hat OpenShift in your browser for free now. <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="47758dcb-13c4-4744-90bc-bc02d4f8e107" href="/developer-sandbox" title="Developer Sandbox for Red Hat OpenShift">Learn more.</a></strong></p>
+
+<ul class="Indent1"><li>Provision your free Red Hat OpenShift development cluster</li>
+	<li>Deploy a <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="95d2388a-ea83-45e6-9ef1-2f423ecefaf3" href="/node/225251" title="Get started with your Developer Sandbox for Red Hat OpenShift">sample application</a> or bring your own repo</li>
+	<li>Edit code from the integrated <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="efb683e0-5f2d-459a-8bcb-20369b886640" href="/node/226181" title="Developer Sandbox for Red Hat OpenShift (IDE)">Eclipse Che-based cloud IDE</a></li>
+</ul>      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  
+<div id="assembly-field-column-2-27865" class="assembly assembly-type-static_content_band component rhd-c-card-grid pf-c-content">
+  <div class="component-limit-width">
+            <div class="pf-l-flex rhd-c-card-grid__wrapper">
+                  
+
+<div  id="assembly-field-content-list-98304" class="assembly assembly-type-static_item pf-c-card rhd-c-card">
+    
+      <img loading="eager" entity_type="assembly" entity_bundle="static_item" parent_field_name="field_image" src="/sites/default/files/styles/large/public/2022_best-of-RHEL_Custom_image.png?itok=ScKjipTC" alt="rhel" typeof="foaf:Image" class="rhd-c-card__image" />
+
+
+
+  
+  
+  
+  
+  <div class="rhd-c-card-content">
+                                                  
+        <h3 class="rhd-c-card__title">
+                              <a href="/node/283484">Top Linux resources of 2022</a>
+                          </h3>
+        
+                
+    
+    
+    
+    
+      </div>
+    </div>
+
+              
+
+<div  id="assembly-field-content-list-98305" class="assembly assembly-type-static_item pf-c-card rhd-c-card">
+    
+      <img loading="eager" entity_type="assembly" entity_bundle="static_item" parent_field_name="field_image" src="/sites/default/files/styles/large/public/gitops-cookbook-share.png?itok=0OTyvBII" alt="gitops cookbook" typeof="foaf:Image" class="rhd-c-card__image" />
+
+
+
+  
+  
+  
+  
+  <div class="rhd-c-card-content">
+                                                  
+        <h3 class="rhd-c-card__title">
+                              <a href="/node/275101">GitOps Cookbook</a>
+                          </h3>
+        
+                
+    
+    
+    
+    
+      </div>
+    </div>
+
+              
+
+<div  id="assembly-field-content-list-98306" class="assembly assembly-type-static_item pf-c-card rhd-c-card">
+    
+      <img loading="eager" entity_type="assembly" entity_bundle="static_item" parent_field_name="field_image" src="/sites/default/files/styles/large/public/kafka-event-driven_1x%20%284%29.png?itok=xnuIIpND" alt="Hello Kafka" typeof="foaf:Image" class="rhd-c-card__image" />
+
+
+
+  
+  
+  
+  
+  <div class="rhd-c-card-content">
+                                                  
+        <h3 class="rhd-c-card__title">
+                              <a href="/node/273191">Hello Kafka</a>
+                          </h3>
+        
+                
+    
+    
+    
+    
+      </div>
+    </div>
+
+      
+    </div>
+          <div class="pf-l-flex rhd-c-card-grid__cta">
+              <a class="pf-c-button pf-m-secondary" href=https://developers.redhat.com/developer-tools data-analytics-linkType="cta" data-analytics-text=Learn about developer tools>Learn about developer tools</a>
+            </div>
+      </div>
+</div>
+</div>
+  </div>
+</section>
+
+
+
+  
+<div class="four-up assembly assembly-type-static_content_band component rhd-c-card-grid pf-c-content" id="assembly-field-sections-24865">
+  <div class="component-limit-width">
+        <div class="pf-l-flex">
+      <h2 class="pf-c-title">Build here</h2>
+    </div>
+            <div class="pf-l-flex rhd-c-card-grid__wrapper">
+                  
+
+<div  id="assembly-field-content-list-71471" class="assembly assembly-type-static_item pf-c-card rhd-c-card">
+    
+      <img loading="eager" entity_type="assembly" entity_bundle="static_item" parent_field_name="field_image" src="/sites/default/files/styles/large/public/sandbox-featured-image.png?itok=hX1pxRWt" alt="Sandbox feature image" typeof="foaf:Image" class="rhd-c-card__image" />
+
+
+
+  
+  
+  
+  
+  <div class="rhd-c-card-content">
+                                                  
+        <h3 class="rhd-c-card__title">
+                              <a href="https://developers.redhat.com/developer-sandbox#assembly-field-sections-57831">Build an application with OpenShift in our no-cost sandbox</a>
+                          </h3>
+        
+                
+    
+    
+    
+    
+      </div>
+    </div>
+
+              
+
+<div  id="assembly-field-content-list-90071" class="assembly assembly-type-static_item pf-c-card rhd-c-card">
+    
+      <img loading="eager" entity_type="assembly" entity_bundle="static_item" parent_field_name="field_image" src="/sites/default/files/styles/large/public/Ansible-card-image.png?itok=y5qMorPN" alt="Red Hat Ansible Automation Platform" typeof="foaf:Image" class="rhd-c-card__image" />
+
+
+
+  
+  
+  
+  
+  <div class="rhd-c-card-content">
+                                                  
+        <h3 class="rhd-c-card__title">
+                              <a href="/node/224071">Red Hat Ansible Automation Platform</a>
+                          </h3>
+        
+                
+    
+    
+    
+    
+      </div>
+    </div>
+
+              
+
+<div  id="assembly-field-content-list-98107" class="assembly assembly-type-static_item pf-c-card rhd-c-card">
+    
+      <img loading="eager" entity_type="assembly" entity_bundle="static_item" parent_field_name="field_image" src="/sites/default/files/styles/large/public/RHEL%209.1_1.png?itok=u6Tv0u2v" alt="RHEL 9.1" typeof="foaf:Image" class="rhd-c-card__image" />
+
+
+
+  
+  
+  
+  
+  <div class="rhd-c-card-content">
+                                                  
+        <h3 class="rhd-c-card__title">
+                              <a href="https://developers.redhat.com/articles/2022/11/16/whats-new-red-hat-enterprise-linux-91?sc_cid=7013a0000034ZDPAA2">Modernize your applications with RHEL 9.1</a>
+                          </h3>
+        
+                
+    
+    
+    
+    
+      </div>
+    </div>
+
+              
+
+<div  id="assembly-field-content-list-98148" class="assembly assembly-type-static_item pf-c-card rhd-c-card">
+    
+      <img loading="eager" entity_type="assembly" entity_bundle="static_item" parent_field_name="field_image" src="/sites/default/files/styles/large/public/GettingGitOps-card-image%20%281%29.png?itok=UDnKQwiC" alt="Getting GitOps" typeof="foaf:Image" class="rhd-c-card__image" />
+
+
+
+  
+  
+  
+  
+  <div class="rhd-c-card-content">
+                                                  
+        <h3 class="rhd-c-card__title">
+                              <a href="/node/273351">Getting GitOps: A practical platform with OpenShift, Argo CD, and Tekton</a>
+                          </h3>
+        
+                
+    
+    
+    
+    
+      </div>
+    </div>
+
+      
+    </div>
+          <div class="pf-l-flex rhd-c-card-grid__cta">
+            </div>
+      </div>
+</div>
+
+
+<div id="assembly-field-sections-37675" class="assembly assembly-type-rich_text component has-background rich-text pf-c-content" style="background-image: url(/sites/default/files/styles/billboard/public/Assembly_Illustration_Design_Marketplace.png?itok=f31DYqR7);">
+  
+  <div class="pf-l-grid pf-m-gutter">
+    <div class="pf-l-grid__item">
+      <div class="rich-text-content">
+                <h1>Enterprise software for any cloud</h1>
+
+<p class="pf-u-pb-sm"><span><span><span><span><span><span>The open cloud marketplace that makes it easier to try, buy, and sell Red Hat Certified software as operators for <a href="https://developers.redhat.com/products/openshift/download">Red Hat OpenShift</a> - for public clouds and on-premises</span></span></span></span></span></span>.</p>
+
+<p><a class="pf-c-button pf-m-heavy" href="https://developers.redhat.com/marketplace">Build with Marketplace</a> </p>      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  
+<div id="assembly-field-sections-2555" class="assembly assembly-type-featured_resources component rhd-c-card-grid pf-c-content">
+  <div class="component-limit-width">
+        <div class="pf-l-flex">
+      <h2 class="pf-c-title">Red Hat Developer e-books</h2>
+    </div>
+            <div class="pf-l-flex rhd-c-card-grid__wrapper">
+                  
+
+<div  role="article" about="/e-books/path-gitops" level="Unclassified" class="pf-c-card rhd-c-card">
+    
+  
+  
+  
+      <div class="rhd-c-card__tag">
+      <i  class="fas fa-book"></i>
+      E-book
+    </div>
+  
+  <div class="rhd-c-card-content">
+                                                  <h3 class="rhd-c-card__title rhd-m-card-title__no-image">The Path to GitOps</h3>
+                
+    
+          <div class="rhd-c-card__sutitle--author">
+        <span>Christian Hernandez</span>
+      </div>
+    
+    
+          <div class="rhd-c-figure">
+  <article class="media media--type-image media--view-mode-card-content-small">
+    
+            <a href="/sites/default/files/2022_RHD_PathtoGitOps_EBook_8.5x11.png"><img loading="lazy" src="/sites/default/files/styles/card_small/public/2022_RHD_PathtoGitOps_EBook_8.5x11.png?itok=VJp2DNK7" width="158" height="205" alt="Path to GitOps e-book cover" typeof="foaf:Image" />
+
+</a>
+
+      </article>
+</div>
+
+    
+          <div class="rhd-c-card__footer">
+                                  <div class="rhd-c-card__footer--cta">
+            <a href="/e-books/path-gitops">
+              Download <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+              </div>
+      </div>
+    </div>
+
+              
+
+<div  role="article" about="/e-books/quarkus-spring-developers" level="Unclassified" class="pf-c-card rhd-c-card">
+    
+  
+  
+  
+      <div class="rhd-c-card__tag">
+      <i  class="fas fa-book"></i>
+      E-book
+    </div>
+  
+  <div class="rhd-c-card-content">
+                                                  <h3 class="rhd-c-card__title rhd-m-card-title__no-image">Quarkus for Spring Developers</h3>
+                
+    
+          <div class="rhd-c-card__sutitle--author">
+        <span>Eric Deandrea</span>
+      </div>
+    
+    
+          <div class="rhd-c-figure">
+  <article class="media media--type-image media--view-mode-card-content-small">
+    
+            <a href="/sites/default/files/Quarkus%20Spring%20ebook%20cover%20final.png"><img loading="lazy" src="/sites/default/files/styles/card_small/public/Quarkus%20Spring%20ebook%20cover%20final.png?itok=h4W-SR4n" width="136" height="205" alt="Quarkus Spring e-book cover" typeof="foaf:Image" />
+
+</a>
+
+      </article>
+</div>
+
+    
+          <div class="rhd-c-card__footer">
+                                  <div class="rhd-c-card__footer--cta">
+            <a href="/e-books/quarkus-spring-developers">
+              Download <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+              </div>
+      </div>
+    </div>
+
+              
+
+<div  role="article" about="/e-books/red-hat-universal-base-images-ubi" level="Unclassified" class="pf-c-card rhd-c-card">
+    
+  
+  
+  
+      <div class="rhd-c-card__tag">
+      <i  class="fas fa-book"></i>
+      E-book
+    </div>
+  
+  <div class="rhd-c-card-content">
+                                                  <h3 class="rhd-c-card__title rhd-m-card-title__no-image">Red Hat Universal Base Images (UBI)</h3>
+                
+    
+          <div class="rhd-c-card__sutitle--author">
+        <span>Mike Guerette</span>
+      </div>
+    
+    
+          <div class="rhd-c-figure">
+  <article class="media media--type-image media--view-mode-card-content-small">
+    
+            <a href="/sites/default/files/ubi-ebook_2x.png"><img loading="lazy" src="/sites/default/files/styles/card_small/public/ubi-ebook_2x.png?itok=Ow7H6wvs" width="149" height="205" alt="Universal Base Images ebook cover" typeof="foaf:Image" />
+
+</a>
+
+      </article>
+</div>
+
+    
+          <div class="rhd-c-card__footer">
+                                  <div class="rhd-c-card__footer--cta">
+            <a href="/e-books/red-hat-universal-base-images-ubi">
+              Download <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+              </div>
+      </div>
+    </div>
+
+              
+
+<div  role="article" about="/e-books/modernizing-enterprise-java" level="Unclassified" class="pf-c-card rhd-c-card">
+    
+  
+  
+  
+      <div class="rhd-c-card__tag">
+      <i  class="fas fa-book"></i>
+      E-book
+    </div>
+  
+  <div class="rhd-c-card-content">
+                                                  <h3 class="rhd-c-card__title rhd-m-card-title__no-image">Modernizing Enterprise Java</h3>
+                
+    
+          <div class="rhd-c-card__sutitle--author">
+        <span>Markus Eisele, Natale Vinto</span>
+      </div>
+    
+    
+          <div class="rhd-c-figure">
+  <article class="media media--type-image media--view-mode-card-content-small">
+    
+            <a href="/sites/default/files/Modernizing%20Enterprise%20Java%20e-book%20FINAL%20cover_0.png"><img loading="lazy" src="/sites/default/files/styles/card_small/public/Modernizing%20Enterprise%20Java%20e-book%20FINAL%20cover_0.png?itok=Yjyxz9_c" width="156" height="205" alt="Modernizing Enterprise Java e-book FINAL cover" typeof="foaf:Image" />
+
+</a>
+
+      </article>
+</div>
+
+    
+          <div class="rhd-c-card__footer">
+                                  <div class="rhd-c-card__footer--cta">
+            <a href="/e-books/modernizing-enterprise-java">
+              Download <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+              </div>
+      </div>
+    </div>
+
+      
+    </div>
+          <div class="pf-l-flex rhd-c-card-grid__cta">
+              <a class="pf-c-button pf-m-secondary" href=https://developers.redhat.com/ebooks data-analytics-linkType="cta" data-analytics-text=View all e-books>View all e-books</a>
+            </div>
+      </div>
+</div>
+
+
+
+  
+<div id="assembly-field-sections-16645" class="assembly assembly-type-featured_resources component rhd-c-card-grid pf-c-content">
+  <div class="component-limit-width">
+        <div class="pf-l-flex">
+      <h2 class="pf-c-title">Red Hat Developer cheat sheets</h2>
+    </div>
+            <div class="pf-l-flex rhd-c-card-grid__wrapper">
+                  
+
+<div  role="article" about="/cheat-sheets/systemd-commands-cheat-sheet" level="Unclassified" class="pf-c-card rhd-c-card">
+    
+  
+  
+  
+      <div class="rhd-c-card__tag">
+      <i  class="fas fa-file-code"></i>
+      Cheat Sheet
+    </div>
+  
+  <div class="rhd-c-card-content">
+                                                  <h3 class="rhd-c-card__title rhd-m-card-title__no-image">systemd Commands Cheat Sheet</h3>
+                
+    
+          <div class="rhd-c-card__sutitle--author">
+        <span>Bob Reselman</span>
+      </div>
+    
+    
+          <div class="rhd-c-figure">
+  <article class="media media--type-image media--view-mode-card-content-small">
+    
+            <a href="/sites/default/files/systemd-commands_cheat-sheet.png"><img loading="lazy" src="/sites/default/files/styles/card_small/public/systemd-commands_cheat-sheet.png?itok=dMU6OZsa" width="136" height="205" alt="systemd Commands cheat sheet cover image" typeof="foaf:Image" />
+
+</a>
+
+      </article>
+</div>
+
+    
+          <div class="rhd-c-card__footer">
+                                  <div class="rhd-c-card__footer--cta">
+            <a href="/cheat-sheets/systemd-commands-cheat-sheet">
+              Download <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+              </div>
+      </div>
+    </div>
+
+              
+
+<div  role="article" about="/cheat-sheets/red-hat-insights-api-cheat-sheet" level="Intermediate" class="pf-c-card rhd-c-card">
+    
+  
+  
+  
+      <div class="rhd-c-card__tag">
+      <i  class="fas fa-file-code"></i>
+      Cheat Sheet
+    </div>
+  
+  <div class="rhd-c-card-content">
+                                                  <h3 class="rhd-c-card__title rhd-m-card-title__no-image">Red Hat Insights API Cheat Sheet</h3>
+                
+    
+          <div class="rhd-c-card__sutitle--author">
+        <span>Jerome Marc</span>
+      </div>
+    
+    
+          <div class="rhd-c-figure">
+  <article class="media media--type-image media--view-mode-card-content-small">
+    
+            <a href="/sites/default/files/Red%20Hat%20Insights%20API%20-%20cover_0.png"><img loading="lazy" src="/sites/default/files/styles/card_small/public/Red%20Hat%20Insights%20API%20-%20cover_0.png?itok=h7LxrAhj" width="136" height="205" alt="Red Hat Insights API" typeof="foaf:Image" />
+
+</a>
+
+      </article>
+</div>
+
+    
+          <div class="rhd-c-card__footer">
+                                  <div class="rhd-c-card__footer--cta">
+            <a href="/cheat-sheets/red-hat-insights-api-cheat-sheet">
+              Download <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+              </div>
+      </div>
+    </div>
+
+              
+
+<div  role="article" about="/cheat-sheets/containers" level="Beginner" class="pf-c-card rhd-c-card">
+    
+  
+  
+  
+      <div class="rhd-c-card__tag">
+      <i  class="fas fa-file-code"></i>
+      Cheat Sheet
+    </div>
+  
+  <div class="rhd-c-card-content">
+                                                  <h3 class="rhd-c-card__title rhd-m-card-title__no-image">Containers Cheat Sheet</h3>
+                
+    
+          <div class="rhd-c-card__sutitle--author">
+        <span>Bachir Chihani and Rafael Benevides</span>
+      </div>
+    
+    
+          <div class="rhd-c-figure">
+  <article class="media media--type-image media--view-mode-card-content-small">
+    
+            <a href="/sites/default/files/containers-cheat-sheet-cover.png"><img loading="lazy" src="/sites/default/files/styles/card_small/public/containers-cheat-sheet-cover.png?itok=yCnQBf3F" width="136" height="205" alt="Containers Cheat Sheet" typeof="foaf:Image" />
+
+</a>
+
+      </article>
+</div>
+
+    
+          <div class="rhd-c-card__footer">
+                                  <div class="rhd-c-card__footer--cta">
+            <a href="/cheat-sheets/containers">
+              Download <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+              </div>
+      </div>
+    </div>
+
+      
+    </div>
+          <div class="pf-l-flex rhd-c-card-grid__cta">
+              <a class="pf-c-button pf-m-secondary" href=https://developers.redhat.com/cheatsheets data-analytics-linkType="cta" data-analytics-text=View all cheat sheets>View all cheat sheets</a>
+            </div>
+      </div>
+</div>
+
+
+<div class="dark centered assembly assembly-type-call_to_action component rich-text pf-c-content" id="assembly-field-sections-155">
+  
+  <div class="cta__container pf-l-grid">
+          <h2 class="cta__title pf-c-title">Join us for our next live DevNation Tech Talk</h2>
+              <div class="cta__content">
+        
+      </div>
+    
+    
+        <div class="cta__cta">
+      <a href="https://developers.redhat.com/devnation/#assembly-field-sections-33055" class="pf-c-button pf-m-heavy" data-analytics-linkType="cta" data-analytics-text="Register">Register</a>
+    </div>
+      </div>
+</div>
+
+
+<div id="assembly-field-sections-7105" class="assembly assembly-type-rich_text component rich-text pf-c-content">
+  
+  <div class="pf-l-grid pf-m-gutter">
+    <div class="pf-l-grid__item">
+      <div class="rich-text-content">
+                <h1 dir="ltr">Developer tutorials and Red Hat software for cloud application development</h1>
+
+<p dir="ltr">Join Red Hat Developer for the tools and training to develop applications for the cloud. Members get access to developer editions of Red Hat’s software, documentation, and <a href="https://developers.redhat.com/ebooks/">premium books</a> from our experts on <a href="https://developers.redhat.com/topics/microservices/">microservices</a>, <a href="https://developers.redhat.com/topics/serverless-architecture/">serverless</a>, <a href="https://developers.redhat.com/topics/kubernetes/">Kubernetes</a>, and <a href="https://developers.redhat.com/topics/linux/">Linux</a>. </p>
+
+<h2 dir="ltr">Cloud-native developer career training</h2>
+
+<p dir="ltr">Today’s containerized applications are changing development work requiring developers to adopt new architectures and <a href="https://developers.redhat.com/topics/devops/">DevOps</a> processes. Red Hat Developer helps you build these skills and provides you with the tools you need to use them in your next application and beyond. Build here. Go anywhere.</p>
+
+<p dir="ltr"> </p>
+
+<div class="pf-l-grid__item pf-m-2-col-on-lg pf-m-12-col-on-sm"><a class="button heavy-cta" href="https://developers.redhat.com/register/?intcmp=701f2000001OMHaAAO">Join Red Hat Developer</a><a class="button medium-cta" data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="23c2d439-f968-438c-b4cf-39daab57ed3c" href="/about" title="About">Learn more</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+  
+</article>
+
+    </div>
+  </div>
+
+  </div>
+
+        </div>
+            </main>
+            <footer role="contentinfo">
+            
+  <div class="region region-rhd-footer">
+      <section id="block-rhdp2-rhdfooter" data-block-plugin-id="system_menu_block:rhd-footer" class="rhd-c-footer pf-l-grid pf-m-gutter">
+    <div id="block-rhdp2-rhdfooter" data-block-plugin-id="system_menu_block:rhd-footer" class="rhd-c-footer pf-l-grid pf-m-gutter rhd-c-footer-links"  id="block-rhdp2-rhdfooter" data-block-plugin-id="system_menu_block:rhd-footer" class="rhd-c-footer pf-l-grid pf-m-gutter rhd-c-footer-links" data-analytics-region="page-footer">
+      
+              <ul class="rhd-menu">
+                              <li data-tmp-ac="Featured Topics" class="rhd-c-nav__item menu-item--expanded">
+        <a href="/" title="Featured Red Hat Developer Topics" class="rhd-c-nav__link is-active" data-analytics-text="Featured Topics" data-analytics-category="Footer|Featured Topics" data-drupal-link-system-path="&lt;front&gt;">Featured Topics</a>
+                                <ul class="rhd-menu">
+                              <li data-tmp-ac="Featured Topics" class="rhd-c-nav__item">
+        <a href="/topics/service-mesh" title="Istio coordinates microservices on Kubernetes in a service mesh with the powerful monitoring and management tool." class="rhd-c-nav__link" data-analytics-text="Istio" data-analytics-category="Footer|Featured Topics" data-drupal-link-system-path="node/204655">Istio</a>
+              </li>
+                          <li data-tmp-ac="Featured Topics" class="rhd-c-nav__item">
+        <a href="/products/quarkus/getting-started" title="Quarkus is Kubernetes native Java" class="rhd-c-nav__link" data-analytics-text="Quarkus" data-analytics-category="Footer|Featured Topics" data-drupal-link-system-path="products/quarkus/getting-started">Quarkus</a>
+              </li>
+                          <li data-tmp-ac="Featured Topics" class="rhd-c-nav__item">
+        <a href="/topics/ci-cd" title="Building containerized applications" class="rhd-c-nav__link" data-analytics-text="CI/CD" data-analytics-category="Footer|Featured Topics" data-drupal-link-system-path="node/218875">CI/CD</a>
+              </li>
+                          <li data-tmp-ac="Featured Topics" class="rhd-c-nav__item">
+        <a href="/topics/serverless-architecture" title="Build and deliver functionality with serverless architecture using Back-end as a Service and Function as a Service." class="rhd-c-nav__link" data-analytics-text="Serverless" data-analytics-category="Footer|Featured Topics" data-drupal-link-system-path="node/205255">Serverless</a>
+              </li>
+                          <li data-tmp-ac="Featured Topics" class="rhd-c-nav__item">
+        <a href="/topics/enterprise-java" title="Java enterprise scale." class="rhd-c-nav__link" data-analytics-text="Enterprise Java" data-analytics-category="Footer|Featured Topics" data-drupal-link-system-path="node/205245">Enterprise Java</a>
+              </li>
+                          <li data-tmp-ac="Featured Topics" class="rhd-c-nav__item">
+        <a href="/topics/linux" title="Enterprise Linux Tutorials &amp; Training." class="rhd-c-nav__link" data-analytics-text="Linux" data-analytics-category="Footer|Featured Topics" data-drupal-link-system-path="node/204685">Linux</a>
+              </li>
+                          <li data-tmp-ac="Featured Topics" class="rhd-c-nav__item">
+        <a href="/topics/microservices" title="Microservices and microservice architecture is the new standard approach to building applications as independent services." class="rhd-c-nav__link" data-analytics-text="Microservices" data-analytics-category="Footer|Featured Topics" data-drupal-link-system-path="node/204665">Microservices</a>
+              </li>
+                          <li data-tmp-ac="Featured Topics" class="rhd-c-nav__item">
+        <a href="/topics/devops" title="DevOps involves the combination of cultural change, process automation, and tools to improve your time-to-market." class="rhd-c-nav__link" data-analytics-text="DevOps" data-analytics-category="Footer|Featured Topics" data-drupal-link-system-path="node/204635">DevOps</a>
+              </li>
+        </ul>
+  
+
+              </li>
+                          <li data-tmp-ac="Build " class="rhd-c-nav__item menu-item--expanded">
+        <a href="/" title="Build modern applications on Kubernetes and Linux" class="rhd-c-nav__link is-active" data-analytics-text="Build " data-analytics-category="Footer|Build " data-drupal-link-system-path="&lt;front&gt;">Build </a>
+                                <ul class="rhd-menu">
+                              <li data-tmp-ac="Build " class="rhd-c-nav__item">
+        <a href="/topics/developer-tools" title="Developer Tools for Cloud Development" class="rhd-c-nav__link" data-analytics-text="Developer Tools" data-analytics-category="Footer|Build " data-drupal-link-system-path="node/206665">Developer Tools</a>
+              </li>
+                          <li data-tmp-ac="Build " class="rhd-c-nav__item">
+        <a href="/learn" title="Interactive courses and learning paths for OpenShift, Linux, and more." class="rhd-c-nav__link" data-analytics-text="Interactive Tutorials" data-analytics-category="Footer|Build " data-drupal-link-system-path="node/263961">Interactive Tutorials</a>
+              </li>
+                          <li data-tmp-ac="Build " class="rhd-c-nav__item">
+        <a href="https://access.redhat.com/containers/" title="Red Hat&#039;s secure, certified, and up-to-date catalog of container images and operators" class="rhd-c-nav__link" data-analytics-text="Container Catalog" data-analytics-category="Footer|Build ">Container Catalog</a>
+              </li>
+                          <li data-tmp-ac="Build " class="rhd-c-nav__item">
+        <a href="https://marketplace.redhat.com" target="_blank" title="Shop for certified enterprise software to install on Red Hat OpenShift." class="rhd-c-nav__link" data-analytics-text="Operators Marketplace" data-analytics-category="Footer|Build ">Operators Marketplace</a>
+              </li>
+                          <li data-tmp-ac="Build " class="rhd-c-nav__item">
+        <a href="/techpartner" target="_blank" title="Certify applications at Red Hat Technology Partner Connect" class="rhd-c-nav__link" data-analytics-text="Certify Applications" data-analytics-category="Footer|Build " data-drupal-link-system-path="node/213445">Certify Applications</a>
+              </li>
+                          <li data-tmp-ac="Build " class="rhd-c-nav__item">
+        <a href="https://redhatofficial.github.io" title="A directory of open source projects Red Hat contributes to on Github" class="rhd-c-nav__link" data-analytics-text="Red Hat on Github" data-analytics-category="Footer|Build ">Red Hat on Github</a>
+              </li>
+        </ul>
+  
+
+              </li>
+                          <li data-tmp-ac="Quicklinks" class="rhd-c-nav__item menu-item--expanded">
+        <a href="/" title="Quick Red Hat Developer Links" class="rhd-c-nav__link is-active" data-analytics-text="Quicklinks" data-analytics-category="Footer|Quicklinks" data-drupal-link-system-path="&lt;front&gt;">Quicklinks</a>
+                                <ul class="rhd-menu">
+                              <li data-tmp-ac="Quicklinks" class="rhd-c-nav__item">
+        <a href="/node/212005" title="New articles at Red Hat Developer" class="rhd-c-nav__link" data-analytics-text="What&#039;s new" data-analytics-category="Footer|Quicklinks" data-drupal-link-system-path="node/212005">What&#039;s new</a>
+              </li>
+                          <li data-tmp-ac="Quicklinks" class="rhd-c-nav__item">
+        <a href="/devnation" title="DevNation Tech Talks, Master Courses, Webinars" class="rhd-c-nav__link" data-analytics-text="DevNation events" data-analytics-category="Footer|Quicklinks" data-drupal-link-system-path="node/206785">DevNation events</a>
+              </li>
+                          <li data-tmp-ac="Quicklinks" class="rhd-c-nav__item">
+        <a href="/e-books" class="rhd-c-nav__link" data-analytics-text="Books" data-analytics-category="Footer|Quicklinks" data-drupal-link-system-path="node/267101">Books</a>
+              </li>
+                          <li data-tmp-ac="Quicklinks" class="rhd-c-nav__item">
+        <a href="/cheat-sheets" class="rhd-c-nav__link" data-analytics-text="Cheat Sheets" data-analytics-category="Footer|Quicklinks" data-drupal-link-system-path="node/267111">Cheat Sheets</a>
+              </li>
+                          <li data-tmp-ac="Quicklinks" class="rhd-c-nav__item">
+        <a href="https://developers.redhat.com/search/?s=most-recent&amp;f=type~video" title="Video Tutorials, Webinars, and Demos" class="rhd-c-nav__link" data-analytics-text="Videos" data-analytics-category="Footer|Quicklinks">Videos</a>
+              </li>
+                          <li data-tmp-ac="Quicklinks" class="rhd-c-nav__item">
+        <a href="/products" title="Red Hat software downloads for developers" class="rhd-c-nav__link" data-analytics-text="Products" data-analytics-category="Footer|Quicklinks" data-drupal-link-system-path="node/204465">Products</a>
+              </li>
+        </ul>
+  
+
+              </li>
+                          <li data-tmp-ac="Communicate" class="rhd-c-nav__item menu-item--expanded">
+        <a href="/" title="Red Hat Developer Communication" class="rhd-c-nav__link is-active" data-analytics-text="Communicate" data-analytics-category="Footer|Communicate" data-drupal-link-system-path="&lt;front&gt;">Communicate</a>
+                                <ul class="rhd-menu">
+                              <li data-tmp-ac="Communicate" class="rhd-c-nav__item">
+        <a href="https://status.redhat.com" target="_blank" title="Red Hat Site Status Dashboard" class="rhd-c-nav__link" data-analytics-text="Site Status Dashboard" data-analytics-category="Footer|Communicate">Site Status Dashboard</a>
+              </li>
+                          <li data-tmp-ac="Communicate" class="rhd-c-nav__item">
+        <a href="https://access.redhat.com/security/team/contact/" target="_blank" class="rhd-c-nav__link" data-analytics-text="Report a security problem" data-analytics-category="Footer|Communicate">Report a security problem</a>
+              </li>
+                          <li data-tmp-ac="Communicate" class="rhd-c-nav__item">
+        <a href="https://www.redhat.com/en/about/here-to-help" title="Red Hat is here to help during COVID-19" class="rhd-c-nav__link" data-analytics-text="Helping during COVID-19" data-analytics-category="Footer|Communicate">Helping during COVID-19</a>
+              </li>
+                          <li data-tmp-ac="Communicate" class="rhd-c-nav__item">
+        <a href="/about" class="rhd-c-nav__link" data-analytics-text="About us" data-analytics-category="Footer|Communicate" data-drupal-link-system-path="node/223221">About us</a>
+              </li>
+                          <li data-tmp-ac="Communicate" class="rhd-c-nav__item">
+        <a href="/contact-sales" class="rhd-c-nav__link" data-analytics-text="Contact Sales" data-analytics-category="Footer|Communicate" data-drupal-link-system-path="node/208445">Contact Sales</a>
+              </li>
+        </ul>
+  
+
+              </li>
+        </ul>
+  
+
+
+    </div>
+
+        <div class="rhd-c-footer-sidebar">
+      <p class="rhd-c-footer-sidebar-title">Red Hat Developer</p>
+      <p class="rhd-c-footer-sidebar-subtitle">Build here. Go anywhere.</p>
+      <p class="rhd-c-footer-sidebar-content">We serve the builders. The problem solvers who create careers with code.</p>
+      <p class="rhd-c-footer-sidebar-content">Join us if you’re a developer, software engineer, web designer, front-end designer, UX designer, computer scientist, architect, tester, product manager, project manager or team lead.</p>
+      <div class="pf-l-flex pf-m-align-items-center">
+        <ul class="rhd-c-footer-sidebar-social">
+          <li><a title="Red Hat Developer - Youtube page" href="https://www.youtube.com/channel/UC7noUdfWp-ukXUlAsJnSm-Q" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a></li>
+          <li><a title="Red Hat Developer - Facebook page" href="https://www.facebook.com/RedHatDeveloper" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a></li>
+          <li><a title="Red Hat Developer - Twitter page" href="https://twitter.com/rhdevelopers" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
+          <li><a title="Red Hat Developer - Github page" href="https://github.com/redhat-developer" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
+        </ul>
+        <a title="Create a Red Hat Developer account" class="rhd-c-footer-sidebar-signup pf-m-link-white" href="/register">Sign me up <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+  <section id="block-rhdp2-universalfooter" data-block-plugin-id="system_menu_block:universal-footer" class="rhd-m-max-width-solid-bg-xl rh-c-universal-footer pf-l-flex pf-m-gutter">
+    <a class="rh-c-universal-footer-logo" href="https://www.redhat.com/en" rel="noopener noreferrer">
+      <img alt="Red Hat Logo" src="/themes/custom/rhdp2/images/branding/RHLogo_white.svg" width="140px" height="33px">
+    </a>
+    
+              <ul class="rhd-menu rh-c-universal-footer-legal">
+                                <li class="rhd-c-nav__item"><span class="copyright">&copy;2023 Red Hat, Inc.</span></li>
+      <li class="rhd-c-nav__item"><span id="teconsent"></span></li>
+            <li class="rhd-c-nav__item">
+        <a href="http://www.redhat.com/en/about/privacy-policy" title="Red Hat Privacy Policy" class="rhd-c-nav__link">Privacy Statement</a>
+      </li>
+                            <li class="rhd-c-nav__item">
+        <a href="http://www.redhat.com/en/about/terms-use" title="Red Hat Terms of Use" class="rhd-c-nav__link">Terms of Use</a>
+      </li>
+                            <li class="rhd-c-nav__item">
+        <a href="http://www.redhat.com/en/about/all-policies-guidelines" title="Red Hat Policies and Guidelines" class="rhd-c-nav__link">All policies and guidelines</a>
+      </li>
+        </ul>
+  
+
+
+    <a class="rh-c-universal-footer-summit-logo" href="https://www.redhat.com/en/summit" target="_blank" rel="noopener noreferrer">
+      <img src="/themes/custom/rhdp2/images/design/logo-summit-20191120.png" alt="Red Hat Summit" width="75px" height="40px">
+    </a>
+  </section>
+
+  </div>
+
+        </footer>
+    </div>
+
+  </div>
+
+    <cpx-user eddl>
+  <cpx-cookie key="rh_jwt_rhd_web" parse="jwt" emit="token-ready"></cpx-cookie>
+</cpx-user>
+<cpx-reporter event="User Detected" beat="eddl-user-ready"></cpx-reporter>
+<cpx-reporter event="Page Load Completed" beat="eddl-user-detected"></cpx-reporter>
+          <!-- TrustArc -->
+      <div id="consent_blackbar" style="position: fixed;bottom: 0;width: 100%;z-index: 5;padding: 10px;"></div>
+        <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/204425","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"red_hat_jwt":{"client_id":"rhd-web","cookie_name":"rh_jwt_rhd_web","leeway":"0","realm":"redhat-external","sso_host":"https:\/\/sso.redhat.com","user_integration":1,"user_plugin":"internal_registration_only_user_auth","use_external_js":1,"drupal_authentication":1},"rhd_admin":{"admin-logout-too":false},"ajax":[],"user":{"uid":0,"permissionsHash":"8b9c69934932c782da2d915faee6332b4be1a6236909ff91672abdbe01beb307"},"rhd":{"downloadManager":{"baseUrl":"https:\/\/developers.redhat.com"},"dcp":{"baseProtocolRelativeUrl":"https:\/\/dcp2.jboss.org:443"},"swel":{"url":"https:\/\/api.developers.redhat.com\/swel"},"fusion":{"url":"https:\/\/api.developers.redhat.com\/search"},"developer_sandbox":{"apiUrl":"https:\/\/registration-service-toolchain-host-operator.apps.sandbox.x8i5.p1.openshiftapps.com\/api\/v1","cheApiUrl":"https:\/\/registration-service-toolchain-host-operator.apps.sandbox.x8i5.p1.openshiftapps.com\/api\/v1","rhodApiUrl":"https:\/\/registration-service-toolchain-host-operator.apps.sandbox.x8i5.p1.openshiftapps.com\/api\/v1","rhoamApiUrl":"https:\/\/registration-service-toolchain-host-operator.apps.rhoam-ds-prod.xe9u.p1.openshiftapps.com\/api\/v1"}}}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.5/es6-shim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.4.3/custom-elements-es5-adapter.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.4.3/webcomponents-bundle.js"></script>
+<script src="/sites/default/files/js/js_-q4JWQJZ8INhVCU_AWI6kzGbZ7FakM7SET9vPJIRVpE.js"></script>
+<script src="https://sso.redhat.com/auth/js/keycloak.js"></script>
+<script src="https://issues.redhat.com/plugins/servlet/issueCollectorBootstrap.js?locale=en-UK&amp;collectorId=03f305bd" defer></script>
+<script src="/themes/custom/rhdp2/dist/js/custom-jira-collector.js?robqeh" defer></script>
+<script src="/sites/default/files/js/js_yspuwu7JjYRq8nETx3pHMayDWPg0_O3l8uhkVLroTZE.js"></script>
+<script src="/themes/custom/rhdp2/dist/js/pdf-links.js?v=9.4.8" defer></script>
+<script src="/themes/custom/rhdp2/dist/js/footer.js?v=9.4.8" defer></script>
+<script src="/themes/custom/rhdp2/dist/js/scroll-to-top.js?v=9.4.8" defer></script>
+<script src="https://kit.fontawesome.com/3f83b4c6d2.js" defer></script>
+<script src="/themes/custom/rhdp2/dist/js/code-snippet.js?robqeh" defer></script>
+<script src="/sites/default/files/js/js_fLRobgTu6lNMJXuicJf2hrqeVKWLcV905WexzMuBWO4.js"></script>
+
+        <script type="text/javascript">
+      if (("undefined" !== typeof _satellite) && ("function" === typeof _satellite.pageBottom)) {
+        _satellite.pageBottom();
+      }
+    </script>
+      </body>
+</html>

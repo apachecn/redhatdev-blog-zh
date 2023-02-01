@@ -1,0 +1,571 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://developers.redhat.com/blog/xmlrpc.php">
+<link rel="shortcut icon" href="https://developers.redhat.com/blog/wp-content/themes/rh-parent-dev/favicon.ico">
+<title>Page not found - RHD Blog</title>
+		<script type="text/javascript">
+		var ajaxurl = 'https://developers.redhat.com/blog/wp-admin/admin-ajax.php';
+		</script>
+		
+<!-- This site is optimized with the Yoast SEO plugin v6.1.1 - https://yoa.st/1yg?utm_content=6.1.1 -->
+<meta name="robots" content="noindex,follow"/>
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="object" />
+<meta property="og:title" content="Page not found - RHD Blog" />
+<meta property="og:site_name" content="RHD Blog" />
+<meta property="fb:admins" content="529931654" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Page not found - RHD Blog" />
+<meta name="twitter:site" content="@rhdevelopers" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/developers.redhat.com\/blog\/","name":"Red Hat Developer Blog","alternateName":"RHD Blog","potentialAction":{"@type":"SearchAction","target":"https:\/\/developers.redhat.com\/blog\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":false,"sameAs":["https:\/\/www.facebook.com\/RedHatDeveloperProgram\/","https:\/\/twitter.com\/rhdevelopers"],"@id":"#organization","name":"Red Hat","logo":"https:\/\/developers.redhat.com\/blog\/wp-content\/uploads\/2017\/09\/RHD-logo.jpg"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//static.jboss.org' />
+<link rel='dns-prefetch' href='//issues.jboss.org' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="RHD Blog &raquo; Feed" href="https://developers.redhat.com/blog/feed/" />
+<link rel="alternate" type="application/rss+xml" title="RHD Blog &raquo; Comments Feed" href="https://developers.redhat.com/blog/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/developers.redhat.com\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56794,8205,9794,65039],[55358,56794,8203,9794,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='selection-sharer-css'  href='https://developers.redhat.com/blog/wp-content/plugins/selection-sharer/css/selection-sharer.css?ver=0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='es-widget-css-css'  href='https://developers.redhat.com/blog/wp-content/plugins/email-subscribers/widget/es-widget.css?ver=4.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-postratings-css'  href='https://developers.redhat.com/blog/wp-content/plugins/wp-postratings/css/postratings-css.css?ver=1.85' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css'  href='https://developers.redhat.com/blog/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.6-78496d1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css'  href='https://developers.redhat.com/blog/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=4.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='rh_parent-style-main-css'  href='https://developers.redhat.com/blog/wp-content/themes/rh-parent-dev/css/style.min.css?ver=4.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='rh-parent-style-css'  href='https://developers.redhat.com/blog/wp-content/themes/rh-parent-dev/css/style.min.css?ver=4.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='rh-dev-css-import-one-css'  href='https://developers.redhat.com/blog/wp-content/themes/rh-dev-blog/css-server-generated/rh-css-output-min-0.css' type='text/css' media='all' />
+<link rel='stylesheet' id='rh-dev-css-import-two-css'  href='https://developers.redhat.com/blog/wp-content/themes/rh-dev-blog/css-server-generated/rh-css-output-min-1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='rh-dev-child-css-css'  href='https://developers.redhat.com/blog/wp-content/themes/rh-dev-blog/css/rh-dev-blog-style-compiled.css' type='text/css' media='all' />
+<link rel='stylesheet' id='rh-fontawesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css?ver=4.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='rh_parent-style-css'  href='https://developers.redhat.com/blog/wp-content/themes/rh-dev-blog/style.css?ver=4.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='addtoany-css'  href='https://developers.redhat.com/blog/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.14' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-featherlight-css'  href='https://developers.redhat.com/blog/wp-content/plugins/wp-featherlight/css/wp-featherlight.min.css?ver=1.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://developers.redhat.com/blog/wp-content/plugins/jetpack/css/jetpack.css?ver=5.7.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.0'></script>
+<script type='text/javascript'>
+var mejsL10n = {"language":"en","strings":{"mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen-off":"Turn off Fullscreen","mejs.fullscreen-on":"Go Fullscreen","mejs.download-video":"Download Video","mejs.fullscreen":"Fullscreen","mejs.time-jump-forward":["Jump forward 1 second","Jump forward %1 seconds"],"mejs.loop":"Toggle Loop","mejs.play":"Play","mejs.pause":"Pause","mejs.close":"Close","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.time-skip-back":["Skip back 1 second","Skip back %1 seconds"],"mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.mute-toggle":"Mute Toggle","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.ad-skip":"Skip ad","mejs.ad-skip-info":["Skip in 1 second","Skip in %1 seconds"],"mejs.source-chooser":"Source Chooser","mejs.stop":"Stop","mejs.speed-rate":"Speed Rate","mejs.live-broadcast":"Live Broadcast","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};
+</script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.6-78496d1'></script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=4.9.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpmejsSettings = {"pluginPath":"\/blog\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//static.jboss.org/rhd/1.2-build-1865/javascripts/vendor/modernizr-custom.js?ver=4.9.1'></script>
+<link rel='https://api.w.org/' href='https://developers.redhat.com/blog/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://developers.redhat.com/blog/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://developers.redhat.com/blog/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.1" />
+
+<script type="text/javascript">
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+</script>
+<script type="text/javascript" src="https://static.addtoany.com/menu/page.js" async="async"></script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//developers.redhat.com/blog/?wordfence_lh=1&hid=75E1C56C77B1086443EEB0D2E64CBB5E');
+</script>		<style>
+		.gist table {
+			margin-bottom: 0 !important;
+			table-layout: auto !important;
+		}
+		.gist .line-numbers
+		{
+			width: 4em !important;
+		}
+		.gist .line,
+		.gist .line-number
+		{
+			font-size: 12px !important;
+			height: 18px !important;
+			line-height: 18px !important;
+		}
+		.gist .line
+		{
+			white-space: pre !important;
+			width: auto !important;
+			word-wrap: normal !important;
+		}
+		.gist .line span
+		{
+			word-wrap: normal !important;
+		}
+		</style>
+		    <script type="text/javascript">
+    var digitalData = {"page":{"attributes":{"queryParameters":""},"pageInfo":{"breadCrumbs":[],"cms":"RHD CMS 8","destinationURL":"https:\/\/developers.redhat.com\/blog\/wp-content\/uploads\/2017\/08\/neurons-1.png","errorMessage":"","errorType":"","language":"en_US","pageID":"","contentID":"","pageName":"404","referringDomain":"","referringURL":"https:\/\/developers.redhat.com\/blog\/category\/performance-2\/","syndicationIds":[],"sysEnv":"","title":"404"},"category":{"contentType":"blog","contentSubType":"","keyPage":false,"keyPageType":"","pageType":"","primaryCategory":"404","subCategories":["",""]}},"user":[{"profile":[{"profileInfo":{"accountID":"","daysSinceLastPurchase":"","daysSinceRegistration":"","eloquaGUID":"POPULATE ELOQUA ID","keyCloakID":"","loggedIn":false,"profileID":"","registered":false,"socialAccountsLinked":[],"subscriptionFrequency":"","subscriptionLevel":"","userAgent":""}}]}]};
+    relURL = window.location.href.replace(/https?:\/\//,"").replace("developers.redhat.com/blog","").replace(/\/$/,"");
+    ( function( w, d, dd, undefined ) {
+      var categoryObj = getCategories();
+
+      function getCookie( name ) {
+        var value = "; " + document.cookie;
+        var parts = value.split( "; " + name + "=" );
+        if ( parts.length == 2 ) {
+          return parts.pop().split( ";" ).shift();
+        }
+      }
+
+      function getQueryParams() {
+        return relURL.split('?')[1] ? relURL.split('?')[1].replace(/=/g,':').split('&') : "";
+      }
+
+      function getCategories() {
+        var categories = { primaryCategory: "", subCategories: [] },
+          url = relURL.split("?")[0].split("#")[0].split(/\//);
+        for(var i=1, l=url.length; i<l; i++) {
+          if (i !== 1 && i <= 3) {
+            categories.subCategories.push(url[i]);
+          }
+
+          if (i === 1) {
+            categories.primaryCategory = url[i].length > 0 ? url[i] : "home page";
+          }
+        }
+        return categories;
+      }
+
+      function getPageName() {
+        var splitURL = relURL.split("?")[0].split("#")[0].split(/\//),
+          page = splitURL.pop();
+        return page.length > 0 ? page : "blog home";
+      }
+
+      dd.page.attributes.queryParameters = getQueryParams();
+      dd.page.category.primaryCategory = categoryObj.primaryCategory;
+      dd.page.category.subCategories = categoryObj.subCategories;
+      dd.page.pageInfo.destinationURL = window.location.href;
+      dd.page.pageInfo.pageName = getPageName();
+      dd.page.pageInfo.breadCrumbs = [categoryObj.primaryCategory, categoryObj.subCategories[0] || ""];
+
+      var registered = getCookie("rhd_member");
+      dd.user[0].profile[0].profileInfo.registered = registered ? true : false;
+
+      if ( d.referrer ) {
+        var a = d.createElement( "a" );
+        a.href = d.referrer;
+
+        dd.page.pageInfo.referringDomain = a.hostname;
+        dd.page.pageInfo.referringURL = a.href;
+      }
+
+      dd.page.pageInfo.sysEnv = ( w.innerWidth <= 768 ) ? "tablet" : "desktop";
+
+      var elqGUID = getCookie( "rh_elqCustomerGUID" );
+      if ( elqGUID ) {
+        dd.user[ 0 ].profile[ 0 ].profileInfo.eloquaGUID = elqGUID;
+      }
+
+    } )( window, document, digitalData );
+    </script>
+    <script id="adobe_dtm" src="https://assets.adobedtm.com/2b327a0a54b320bf1bcdb5fa39a2b896027067d9/satelliteLib-9ec3c34e9d660fa2fcb85ced512c3a48dc09c0c5.js"></script>
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<link rel='dns-prefetch' href='//jetpack.wordpress.com'/>
+<link rel='dns-prefetch' href='//s0.wp.com'/>
+<link rel='dns-prefetch' href='//s1.wp.com'/>
+<link rel='dns-prefetch' href='//s2.wp.com'/>
+<link rel='dns-prefetch' href='//public-api.wordpress.com'/>
+<link rel='dns-prefetch' href='//0.gravatar.com'/>
+<link rel='dns-prefetch' href='//1.gravatar.com'/>
+<link rel='dns-prefetch' href='//2.gravatar.com'/>
+<meta property="fb:app_id" content="1650560165253145"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+    var $ = jQuery.noConflict();
+</script>
+</head>
+
+<body class="error404 wp-featherlight-captions group-blog">
+<div class="site-wrapper">
+<!-- Header created 16 Nov 2017  18:20:47 --><header class="main clearfix"><div class="row header-wrap">
+        <nav class="accounts"><ul>
+                <li class="login"><a>Log In</a></li>
+                <li class="register"><a>Register</a></li>
+                <li class="logged-in"><a class="logged-in-name" href="#"></a></li>
+                <li class="logged-in"><a class="logout" href="#">Log Out</a></li>
+            </ul>
+            <div class="search-wrapper">
+                <form class="search-bar" accept-charset="utf-8" action="https://developers.redhat.com/search/" method="get" role="search" type="submit">
+                    <input class="user-search" type="text" placeholder="Enter your search term" id="search_list_text" name="t" maxlength="128" required><button type="submit" id="search-button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </nav><div class="logo-wrap">
+            <h1 class="logo">
+                <!-- Do not remove the 'home-link' id from this 'a' tag -->
+                <a id="home-link" href="https://developers.redhat.com/" title="Red Hat Developers"><img alt="Red Hat Developers" src="https://developers.redhat.com/images/design/RHD-logo.svg"></a>
+            </h1>
+            <a class="nav-toggle" href="#">Menu<i class="fa fa-angle-down"></i></a>
+        </div>
+        <nav class="mega-menu"><ul>
+                <li class="has-sub-nav">
+                    <a href="#" class="sub-nav-topics">Topics<i class="fa fa-angle-down "></i></a>
+                    <div class="sub-nav" id="sub-nav-topics">
+                        <a href="https://developers.redhat.com/topics/containers/">Containers</a>
+                        <a href="https://developers.redhat.com/topics/devops/">DevOps</a>
+                        <a href="https://developers.redhat.com/topics/enterprise-java/">Enterprise Java</a>
+                        <a href="https://developers.redhat.com/topics/iot/">Internet of Things</a>
+                        <a href="https://developers.redhat.com/topics/microservices/">Microservices</a>
+                        <a href="https://developers.redhat.com/topics/mobile/">Mobile</a>
+                        <a href="https://developers.redhat.com/topics/security/">Secure Programming</a>
+                        <a href="https://developers.redhat.com/topics/web-and-api-development/">Web and API Development</a>
+                        <a href="https://developers.redhat.com/topics/dotnet/">.NET Core</a>
+                    </div>
+                </li>
+                <li class="has-sub-nav">
+                    <a href="#" class="sub-nav-products">Technologies<i class="fa fa-angle-down"></i></a>
+                    <div class="sub-nav" id="sub-nav-technologies">
+                        <div class="sub-nav-group">
+                            <a class="heading" href="https://developers.redhat.com/products/#development_and_management">Accelerated Development and Management</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/datagrid/overview/">Red Hat JBoss Data Grid</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/eap/overview/">Red Hat JBoss Enterprise Application Platform</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/webserver/overview/">Red Hat JBoss Web Server</a>
+                        </div>
+                        <div class="sub-nav-group">
+                            <a class="heading" href="https://developers.redhat.com/products/#developer_tools">Developer Tools</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/rhamt/overview/">Red Hat Application Migration Toolkit</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/cdk/overview/">Red Hat Container Development Kit</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/devsuite/overview/">Red Hat Development Suite</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/devstudio/overview/">Red Hat JBoss Developer Studio</a>
+                        </div>
+                        <div class="sub-nav-group">
+                            <a class="heading" href="https://developers.redhat.com/products/#mobile">Mobile</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/mobileplatform/overview/">Red Hat Mobile Application Platform</a>
+                        </div>
+                        <div class="sub-nav-group">
+                            <a class="heading" href="https://developers.redhat.com/products/#cloud">Cloud</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/rhoar/overview/">Red Hat OpenShift Application Runtimes</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/openshift/overview/">Red Hat OpenShift Container Platform</a>
+                        </div>
+                        <div class="sub-nav-group">
+                            <a class="heading" href="https://developers.redhat.com/products/#infrastructure">Infrastructure</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/rhel/overview/">Red Hat Enterprise Linux</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/sap/overview/">RHEL for SAP Solutions</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/softwarecollections/overview/">Red Hat Software Collections</a>
+                        </div>
+                        <div class="sub-nav-group">
+                            <a class="heading" href="https://developers.redhat.com/products/#integration_and_automation">Integration and Automation</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/amq/overview/">Red Hat JBoss AMQ</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/datavirt/overview/">Red Hat JBoss Data Virtualization</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/fuse/overview/">Red Hat JBoss Fuse</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/bpmsuite/overview/">Red Hat JBoss BPM Suite</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/brms/overview/">Red Hat JBoss BRMS</a>
+                        </div>
+                        <div class="sub-nav-group">
+                            <a class="heading" href="https://developers.redhat.com/products/#languages_and_compilers">Languages and Compilers</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/dotnet/overview/">.NET Core</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/clang-llvm-go-rust/overview/">Clang/LLVM, Go, Rust</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/developertoolset/overview/">Red Hat Developer Toolset</a>
+                            <a class="hide-on-mobile" href="https://developers.redhat.com/products/openjdk/overview/">OpenJDK</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="has-sub-nav">
+                    <a href="#" class="sub-nav-community">Community<i class="fa fa-angle-down"></i></a>
+                    <div class="sub-nav pull-right" id="sub-nav-community">
+                        <a href="https://developers.redhat.com/blog">Developers Blog<span class="page-description">Insights &amp; news on Red Hat developer tools, platforms and more</span></a>
+                        <a href="https://developers.redhat.com/events/">Events<span class="page-description">Find the latest conferences, meetups, and virtual seminars</span></a>
+                        <div class="sub-nav-group">
+                            <a href="https://developers.redhat.com/projects/">Open Source Communities<span class="page-description">Community Projects that Red Hat participates in</span></a>
+                        </div>
+                        <a href="https://developers.redhat.com/community/contributor/">Content Contributors<span class="page-description">Share your knowledge. Contribute content to Red Hat Developers.</span></a>
+                    </div>
+                </li>
+                <li class="has-sub-nav">
+                    <a href="#" class="sub-nav-help">Help<i class="fa fa-angle-down"></i></a>
+                    <div class="sub-nav pull-right" id="sub-nav-help">
+                        <a href="https://developers.redhat.com/resources/">Resources<span class="page-description">Important technical resources for you in all shapes and sizes:  blogs, books, code, videos and more.</span></a>
+                        <a href="https://developers.redhat.com/forums/">Forums<span class="page-description">We've extended our popular JBoss.org forums to cover our entire Red Hat portfolio for you.</span></a>
+                        <a href="https://developers.redhat.com/stack-overflow/">Stack Overflow Q&amp;A<span class="page-description">You already use Stack Overflow, so we'll help you use it to find your best answers.</span></a>
+                    </div>
+                </li>
+                <li><a href="https://developers.redhat.com/downloads/" class="sub-nav-downloads">Downloads </a></li>
+            </ul></nav>
+</header><div id="page" class="hfeed site">
+	<a class="skip-link visuallyhidden" href="#content">Skip to content</a>
+  
+ <!-- RED HAT BLOG MARQUEE -->
+  <div class="row blog-header">
+    <div class=" blog-marquee">
+        <div class="title-section main-rh-blog-title">Blog</div>
+        <div class="title-section main-rh-blog-sub-heading">Insights and news on Red Hat developer tools, platforms and more</div>
+    </div>
+  </div>
+    <!-- /RED HAT BLOG MARQUEE -->
+  
+  	<nav id="site-navigation" class="main-navigation" role="navigation">
+		<div class="container">
+			<div class="menu-primary-container"><ul id="primary-menu" class="primary-nav"><li id="menu-item-415807" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-415807"><a href="/blog">Blog</a></li>
+<li id="menu-item-433647" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-433647"><a href="https://developers.redhat.com/blog/category/rhel/">RHEL</a></li>
+<li id="menu-item-420728" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-420728"><a href="https://developers.redhat.com/blog/category/containers/">Containers</a></li>
+<li id="menu-item-431338" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-431338"><a href="https://developers.redhat.com/blog/category/devops/">DevOps</a></li>
+<li id="menu-item-420731" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-420731"><a href="https://developers.redhat.com/blog/category/performance-2/">Perf</a></li>
+<li id="menu-item-422066" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-422066"><a>Languages</a>
+<ul class="sub-menu">
+	<li id="menu-item-421017" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-421017"><a href="https://developers.redhat.com/blog/category/java/">Java</a></li>
+	<li id="menu-item-422065" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-422065"><a href="https://developers.redhat.com/blog/category/programming/javascript/">JavaScript</a></li>
+	<li id="menu-item-422064" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-422064"><a href="https://developers.redhat.com/blog/category/other-languages/">Other</a></li>
+</ul>
+</li>
+<li id="menu-item-433645" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-433645"><a href="https://developers.redhat.com/blog/category/products/accelerated-development-management/">Development</a></li>
+<li id="menu-item-433646" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-433646"><a href="https://developers.redhat.com/blog/category/openshift/">Cloud</a></li>
+<li id="menu-item-421537" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-421537"><a href="https://developers.redhat.com/blog/category/products/mobile/">Mobile</a></li>
+</ul></div>		</div>
+	</nav><!-- #site-navigation -->
+
+    <div id="navDropdownContainer" class="blog-nav-dropdown">
+
+    </div><!-- / .blog-nav-dropdown -->
+  
+	<div id="content" class="site-content">
+		<div class="container main-body-container">
+			<div class="row">
+	<div id="primary" class="content-area error-outer-container">
+		<main id="main" class="site-main" role="main">
+
+			<section class="error-404 not-found">
+				<header class="page-header">
+					<h1 class="page-title">Oops! That page can&rsquo;t be found.</h1>
+				</header><!-- .page-header -->
+
+				<div class="page-content">
+					<p>It looks like nothing was found at this location. Maybe try searching?</p>
+
+					<form class="search-form" role="search" method="get" id="searchform" action="https://developers.redhat.com/blog/">
+    <div class="form-group">
+    	<label class="sr-only" for="s">Search Blog</label>
+        <input type="text" placeholder="Search Blog" name="s" id="s" />
+    </div>
+        <button type="submit" class="btn">Search</button>
+</form>
+
+					<div class="callout-light error-button-content">
+						<p>If you're feeling especially helpful today (and we hope you are), you can also raise a bug and tell us more about this issue, such as what you were trying to do before you arrived here.</p>
+						<a class="button" href="#" id="errorPageCustomTrigger">Report a website issue</a>
+					</div>
+
+				</div><!-- .page-content -->
+			</section><!-- .error-404 -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+			</div><!-- .row -->
+		</div><!-- .container.main-body-container -->
+	</div><!-- #content -->
+
+<footer class="bottom"><section class="footer-links"><div class="row">
+            <div class="large-8 medium-12 columns right rhdp-info">
+                <h3>Red Hat Developer Program</h3>
+                <p>We provide a complete experience to enable enterprise developers and software builders to envision, create and maintain high-value enterprise software.</p>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <a href="https://developers.redhat.com/about/">About us</a>
+                    </div>
+                    <div class="small-12 columns">
+                        <ul class="social-nav">
+                            <li>
+                                <a href="https://www.youtube.com/channel/UC7noUdfWp-ukXUlAsJnSm-Q" target="_self" rel="noopener noreferrer"><i class="fa fa-youtube"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/RedHatDeveloperProgram" target="_self" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/rhdevelopers" target="_self" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="collapseFooter" class="large-16 medium-12 columns">
+                <div class="large-8 columns collapsible-section">
+                    <h3 class="section-toggle">
+                        <span class="toggle-icon"></span>Related Sites</h3>
+                    <div class="section-content">
+                        <ul class="quick-links">
+                            <li><a href="https://openshift.io/" target="_self" rel="noopener noreferrer">Red Hat OpenShift.io</a></li>
+                            <li><a href="https://www.openshift.com/" target="_self" rel="noopener noreferrer">Red Hat OpenShift Online</a></li>
+                            <li><a href="https://www.redhat.com/en/store/" target="_self" rel="noopener noreferrer">Red Hat Store</a></li>
+                            <li><a href="https://www.redhat.com/en/jobs/" target="_self" rel="noopener noreferrer">Red Hat Jobs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="large-8 columns collapsible-section">
+                    <h3 class="section-toggle">
+                        <span class="toggle-icon"></span>Services</h3>
+                    <div class="section-content">
+                        <ul class="quick-links">
+                            <li><a href="https://access.redhat.com/" target="_self" rel="noopener noreferrer">Customer Portal</a></li>
+                            <li><a href="https://www.redhat.com/en/services/training" target="_self" rel="noopener noreferrer">Developer Training and Certification</a></li>
+                            <li><a href="https://www.redhat.com/en/services/consulting" target="_self" rel="noopener noreferrer">Consulting Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="large-8 columns collapsible-section">
+                    <h3 class="section-toggle">
+                        <span class="toggle-icon"></span>Communicate</h3>
+                    <div class="section-content">
+                        <ul class="quick-links">
+                            <li class="report-an-issue-li"><a class="report-an-issue" href="#" id="rhdCustomTrigger">Report a website issue</a></li>
+                            <li><a href="https://access.redhat.com/security/team/contact/" target="_self" rel="noopener noreferrer">Report a security problem</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><section class="footer-legal"><div class="legal">
+            <div class="row">
+                <div class="medium-5 small-24 columns">
+                    <a href="https://www.redhat.com/" target="_self" rel="noopener noreferrer"><img alt="Red Hat" class="rh-logo" src="https://developers.redhat.com/images/branding/RHLogo_white.svg"></a>
+                </div>
+                <div class="medium-14 columns">
+                    <ul class="inline-list">
+                        <li><a class="copyright">Copyright © 2017 Red Hat Inc.</a></li>
+                        <li><a href="http://www.redhat.com/en/about/privacy-policy" target="_self" rel="noopener noreferrer">Privacy statement</a></li>
+                        <li><a href="http://www.redhat.com/en/about/terms-use" target="_self" rel="noopener noreferrer">Terms of use</a></li>
+                        <li><a href="http://www.redhat.com/en/about/all-policies-guidelines" target="_self" rel="noopener noreferrer">All policies and guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="medium-5 small-24 right columns">
+                    <a class="summit-logo" href="http://www.redhat.com/summit/" target="_self" rel="noopener noreferrer"><img src="https://developers.redhat.com/images/design/logo-summit.png" alt="Red Hat Summit"></a>
+                </div>
+            </div>
+        </div>
+    </section></footer></div><!-- #page -->
+</div><!-- / .site-wrapper -->
+
+
+<script>jQuery(document).ready(function ($) { $('p').selectionSharer();});</script>	<div style="display:none">
+	</div>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var es_widget_notices = {"es_email_notice":"Please enter email address","es_incorrect_email":"Please provide a valid email address","es_load_more":"loading...","es_ajax_error":"Cannot create XMLHTTP instance","es_success_message":"Successfully Subscribed.","es_success_notice":"Your subscription was successful! Within a few minutes, kindly check the mail in your mailbox and confirm your subscription. If you can't see the mail in your mailbox, please check your spam folder.","es_email_exists":"Email Address already exists!","es_error":"Oops.. Unexpected error occurred.","es_invalid_email":"Invalid email address","es_try_later":"Please try after some time","es_problem_request":"There was a problem with the request"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-content/plugins/email-subscribers/widget/es-widget.js?ver=4.9.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var es_widget_page_notices = {"es_email_notice":"Please enter email address","es_incorrect_email":"Please provide a valid email address","es_load_more":"loading...","es_ajax_error":"Cannot create XMLHTTP instance","es_success_message":"Successfully Subscribed.","es_success_notice":"Your subscription was successful! Within a few minutes, kindly check the mail in your mailbox and confirm your subscription. If you can't see the mail in your mailbox, please check your spam folder.","es_email_exists":"Email Address already exists!","es_error":"Oops.. Unexpected error occurred.","es_invalid_email":"Invalid email address","es_try_later":"Please try after some time","es_problem_request":"There was a problem with the request"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-content/plugins/email-subscribers/widget/es-widget-page.js?ver=4.9.1'></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201804'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ratingsL10n = {"plugin_url":"https:\/\/developers.redhat.com\/blog\/wp-content\/plugins\/wp-postratings","ajax_url":"https:\/\/developers.redhat.com\/blog\/wp-admin\/admin-ajax.php","text_wait":"Please rate only 1 item at a time.","image":"thumbs","image_ext":"gif","max":"2","show_loading":"1","show_fading":"1","custom":"1"};
+var ratings_1_mouseover_image=new Image();ratings_1_mouseover_image.src="https://developers.redhat.com/blog/wp-content/plugins/wp-postratings/images/thumbs/rating_1_over.gif";var ratings_2_mouseover_image=new Image();ratings_2_mouseover_image.src="https://developers.redhat.com/blog/wp-content/plugins/wp-postratings/images/thumbs/rating_2_over.gif";;
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-content/plugins/wp-postratings/js/postratings-js.js?ver=1.85'></script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=4.9.1'></script>
+<script type='text/javascript' src='https://secure.gravatar.com/js/gprofiles.js?ver=2018Janaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.9.1'></script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-content/themes/rh-parent-dev/js/scripts.min.js?ver=20120206'></script>
+<script type='text/javascript' src='//static.jboss.org/rhd/1.2-build-1865/javascripts/foundation/foundation.js?ver=4.9.1'></script>
+<script type='text/javascript' src='https://developers.redhat.com/auth/js/keycloak.js'></script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-content/themes/rh-dev-blog/js/sso.js'></script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-content/themes/rh-dev-blog/js/jquery.waypoints.min.js'></script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-content/themes/rh-dev-blog/js/sticky.min.js'></script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-content/themes/rh-dev-blog/js/rhdeveloperblog-jquery.js'></script>
+<script type='text/javascript' src='https://issues.jboss.org/s/36fcee7e2c47b82293b8ffd249c9132e-T/-bdgec2/72005/38e4585ff05eb2dd95a30399b8504050/2.0.22/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-UK&#038;collectorId=03f305bd'></script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-content/themes/rh-dev-blog/js/custom-jira-collector.js'></script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-content/plugins/wp-featherlight/js/wpFeatherlight.pkgd.min.js?ver=1.2.0'></script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-includes/js/wp-embed.min.js?ver=4.9.1'></script>
+<script type='text/javascript' src='https://developers.redhat.com/blog/wp-content/plugins/selection-sharer/js/selection-sharer.js?ver=0.1'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-201804.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:5.7.1',blog:'121547928',post:'0',tz:'-4',srv:'developers.redhat.com'} ]);
+	_stq.push([ 'clickTrackerInit', '121547928', '0' ]);
+</script>
+
+<!-- Red Hat Developers JS -->
+  <script type="text/javascript">
+	$(document).foundation();
+</script>
+
+<script type="text/javascript">
+  
+  mobileNav = function() {
+    $('.nav-toggle').on('click touchend',function(e) {
+        e.preventDefault(),$('body').toggleClass('nav-open');
+    });
+    $(".has-sub-nav > a").on("click", function(e) {
+           if(920 >= window.innerWidth) {
+               e.preventDefault(),
+               $(".sub-nav-open").not($(this).parent()).removeClass("sub-nav-open"),
+               $(this).parent().toggleClass("sub-nav-open");
+           }
+    });
+    };
+
+
+    mobileNav();
+  
+  </script>
+<!-- End Red Hat Developers JS -->
+</body>
+</html>
